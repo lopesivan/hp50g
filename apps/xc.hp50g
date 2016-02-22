@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ 2fasor.hp50g - 2fasor
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+"reatancia capacitiva:"
+{":C:
+:W:"
+{1, 0}V } INPUT OBJ\->
+* INV
+\>>

@@ -1,0 +1,11 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Lowest common multiple (uses GCD above)
+@ LCM
+\<<
+  DUP2 GCD / *
+\>>

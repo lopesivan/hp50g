@@ -1,0 +1,36 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Laplace"
+  {
+    {"laplace"               \<< :3: "GRB/laplace.grb"                  \>> }
+    {"L impulso unitario"  \<< :3: "GRB/liu.grb" \>>}
+    {"L degrau unitario"  \<< :3: "GRB/ldu.grb" \>>}
+    {"L rampa unitaria"  \<< :3: "GRB/lru.grb" \>>}
+    {"L semi parabolico"  \<< :3: "GRB/lsp.grb" \>>}
+    {"caso especial"  \<< :3: "GRB/lf1.grb" \>>}
+    {"L sin(wt)"  \<< :3: "GRB/lsinwt.grb" \>>}
+    {"L cos(wt)"  \<< :3: "GRB/lcoswt.grb" \>>}
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+
+  @DO UNTIL KEY END
+
+  LoadCST
+
+\>>
+

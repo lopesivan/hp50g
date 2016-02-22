@@ -1,0 +1,37 @@
+%%HP: T(0)A(D)F(.);
+@ apps/cil2es.hp50g - Cil 2es
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+   \-> A,B,C
+   \<<
+     A 2 ^
+     B 2 ^
+     C 2 ^
+     +
+     +
+     \v/
+
+     A 2 ^
+     B 2 ^
+     +
+     \v/
+     C
+     /
+     ATAN
+
+     B A / ATAN
+
+     \Gh SIN 0 \Gh COS
+     \Gh COS 0 \Gh SIN NEG
+     0 1 0 3 3 \->matrix
+
+     A B C
+     3 \->LIST AXL
+     *
+   \>>
+\>>
+
+

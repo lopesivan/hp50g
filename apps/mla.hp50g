@@ -1,0 +1,30 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Make a test list A to Z
+@ MLA
+\<<
+  \-> n
+  \<<
+    { A...Z }
+    1
+    n
+    26
+    /
+    CEIL
+    LN
+    2
+    LN
+    /
+    CEIL
+    START
+      DUP
+      +
+    NEXT
+    1
+    n
+    SUB
+\>>

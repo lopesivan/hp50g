@@ -1,0 +1,24 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Remove an element
+@ Given a list on level two and a position number on level one, ‘REL’ will remove an element.
+
+@ REL
+\<<
+  SWAP
+  LIST\->
+  2
+  +
+  DUP ROLL
+  OVER
+  SWAP
+  -
+  ROLL
+  DROP
+  3 -
+  \->LIST
+\>>

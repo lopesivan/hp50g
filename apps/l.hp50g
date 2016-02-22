@@ -1,0 +1,35 @@
+%%HP: T(0)A(D)F(.);
+@ r.hp50g - R
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Indutor"
+  {
+    {"i(t)"           \<< :3: "GRB/ii.grb"  \>> }
+    {"v(t)"           \<< :3: "GRB/iv.grb"  \>> }
+    {"X_L"            \<< :3: "GRB/ixl.grb" \>> }
+    {"p"              \<< :3: "GRB/ip.grb"  \>> }
+    {"atrasa/adianta" \<< :3: "GRB/ic1.grb" \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+
+  @DO UNTIL KEY END
+
+  LoadCST
+
+ 33 KEYEVAL
+ 33 KEYEVAL
+ 33 KEYEVAL
+\>>

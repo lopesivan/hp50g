@@ -1,0 +1,11 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+
+  { " = " \<< -105. usetf -3. usetf -17. setf \>> }
+  { input \->ARRY }
+  { "p(x)" \->func }
+  { "(x)p" func\-> }
+  XQ
+
+}
+

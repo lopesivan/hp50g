@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ /home/ivan/workspace/hp50g/programs/main/apps/nbits.hp50 - Nbits
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ númerp de bits
+@ exemplo:
+@ 7
+@ \->nbits
+@ 3
+
+\<<
+"Number of BITS for decimal number"
+{":N: " { 0 0 } }
+INPUT OBJ\->
+0 1 ROT FOR c 1 + c STEP
+\>>
+

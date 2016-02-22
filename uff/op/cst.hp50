@@ -1,0 +1,45 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { " = " toInteger           }
+  { " ~ " toFloat             }
+  {"S\->N" \<< "'" SWAP + OBJ\-> \>>}
+  {"N\->S" \<<
+  \->STR DUP
+  IF "'" POS 1 ==
+  THEN DUP SIZE 1 - 2 SWAP SUB
+  END
+  \>>}
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { M matrix                  }
+  {"Q" q                      }
+  { "tools" tools             }
+  {"2A" \<<
+    \->STR SWAP \->STR
+    :3: "PROGRAMS/FMT2A" EVAL
+    @OBJ\->
+    @:3: "APPS/comb.hp" EVAL
+  \>> }
+  {"3A" \<<
+    \->STR SWAP \->STR ROT \->STR
+    @UNROT
+    :3: "PROGRAMS/FMT3A" EVAL
+    @OBJ\->
+    @:3: "APPS/perm.hp" EVAL
+  \>> }
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  { facts FACTORS             }
+  { "<-+->" EXPAND            }
+  {"+ mod" EXPANDMOD          }
+  {"- mod" FACTORMOD          }
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  { facts FACTORS             }
+  { pfrac PARTFRAC            }
+  { expand EXPAND             }
+  { AXL                       }
+  {"<" \<< 33 KEYEVAL \>>     }
+}

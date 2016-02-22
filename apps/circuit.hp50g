@@ -1,0 +1,42 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Grob files"
+  {
+    {"circuito rc"      \<< :3: "GRB/cirrc.grb"  \>> }
+    {"L circuito rc"    \<< :3: "GRB/lcirrc.grb" \>> }
+    {"algebra booleana" \<< :3: "GRB/abool.grb"  \>> }
+    {"Indutor"   \<< :3: "GRB/ic1.grb"  \>> }
+    {"Capacitor"   \<< :3: "GRB/ic2.grb"  \>> }
+    {"Z serie"   \<< :3: "GRB/zserie.grb"  \>> }
+    {"Z paralelo"   \<< :3: "GRB/zparalelo.grb"  \>> }
+    {"P (Ativa) Q(reativa)"  \<< :3: "GRB/p.grb"  \>> }
+    {"vec(S)"  \<< :3: "GRB/vp.grb"  \>> }
+    {"vec(S_R,S_L,S_C)"  \<< :3: "GRB/vprlc.grb"  \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+
+  @DO UNTIL KEY END
+
+  LoadCST
+
+ @33 KEYEVAL
+ @33 KEYEVAL
+ @33 KEYEVAL
+
+\>>
+

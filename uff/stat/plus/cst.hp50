@@ -1,0 +1,9 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { op \<< 44.2 KEYEVAL 15.1 KEYEVAL \>> }
+  S
+  !
+  { c \<< COMB 2. ROLLD COMB \>> }
+  { p \<< PERM 2. ROLLD PERM \>> }
+}
+

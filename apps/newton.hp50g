@@ -1,0 +1,22 @@
+%%HP: T(0)A(D)F(.);
+@ newton.hp50g - Newton
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+
+@ Descrição:
+@ entrada: a ordem n do polinômio (a+b)^n
+@ retorna o vetor de coeficientes do binomio de Newton
+@ (a+b)^n
+@
+\<< \-> N
+  \<< N \-> K
+    \<< 1 N 1 +
+      START
+        N K COMB 'K' 1 STO-
+      NEXT
+      N 1 + \->LIST 1 \->LIST AXL
+    \>>
+  \>>
+\>>

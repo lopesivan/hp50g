@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ myapps.hp50g - Myapps
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@@171
+    @@171 @@141 A, B
+        A
+        @@141tag
+        "APPS/" B ".hp" +
+    @@187
+@@187

@@ -1,0 +1,15 @@
+%%HP: T(0)A(D)F(.);
+@ exemplo.hp50 - Exemplo
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+CLEAR
+
+[1 -11 44 -76 48]
+2
+\->briot
+
+\>>
+

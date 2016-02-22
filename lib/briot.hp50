@@ -1,0 +1,55 @@
+@ [1 -11 44 -76 48]
+@ 2
+@ 3
+@ briot\->
+
+briot\->
+\<<
+  \-> P, X0, degree
+  \<<
+    {} 'cofs' STO
+    P \->func
+    X0
+    1 degree
+    FOR I  @ "I" is the local variable
+      HORNER
+      cofs
+      +
+      'cofs' STO
+    NEXT    @ Repeat...
+    {1} cofs +
+    {cofs} PURGE
+  \>>
+\>>
+
+
+\->briot
+\<<
+  DUP2
+  \-> P, X0
+  \<<
+    1 P AXL SIZE 1 -
+    FOR I
+      P
+      X0
+      I
+      briot\->
+      ROT
+      func\-> AXL
+      1 I
+      START
+        0
+      NEXT
+      I \->LIST
+      +
+      SWAP DROP
+      SWAP DROP
+    NEXT
+
+    P AXL SIZE 1 - \->jLrmatrix
+    @'\GSDAT' STO
+    STO\GS
+    "Briot-Ruffini"
+    \GSDAT
+  \>>
+\>>

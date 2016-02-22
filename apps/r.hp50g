@@ -1,0 +1,40 @@
+%%HP: T(0)A(D)F(.);
+@ r.hp50g - R
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "resistor"
+  {
+    {"v(t)"     \<< :3: "GRB/rv.grb"       \>> }
+    {"i(t)"     \<< :3: "GRB/ri.grb"       \>> }
+    {"I_m"      \<< :3: "GRB/rim.grb"       \>> }
+    {"p"        \<< :3: "GRB/rp.grb"          \>> }
+    {"pm"       \<< :3: "GRB/rpm.grb"        \>> }
+    {"sin^2(x)" \<< :3: "GRB/rcond.grb"    \>> }
+    {"p"        \<< :3: "GRB/rpp.grb"             \>> }
+    {"p media"  \<< :3: "GRB/rpmedia.grb"   \>> }
+    {"V eficaz" \<< :3: "GRB/rveficaz.grb" \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+
+  @DO UNTIL KEY END
+
+  LoadCST
+
+ 33 KEYEVAL
+ 33 KEYEVAL
+ 33 KEYEVAL
+\>>
+

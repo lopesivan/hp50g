@@ -1,0 +1,14 @@
+%%HP: T(0)A(D)F(.);
+@ estrela_delta.hp50g - Estrela Delta
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  \-> X, Y, Z
+  \<<
+   '(X*Y+X*Z+Y*Z)/X' EVAL "Ra" \->TAG
+   '(X*Y+X*Z+Y*Z)/Y' EVAL "Rb" \->TAG
+   '(X*Y+X*Z+Y*Z)/Z' EVAL "Rc" \->TAG
+  \>>
+\>>

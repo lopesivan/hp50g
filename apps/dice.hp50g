@@ -1,0 +1,22 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Roll a pair of dice, m.n
+
+@ DICE
+\<<
+  1 2
+  START
+    RAND
+    6
+    *
+    CEIL
+  NEXT
+  10
+  /
+  +
+\>>
+

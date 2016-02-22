@@ -1,0 +1,29 @@
+%%HP: T(0)A(D)F(.);
+@ exemplo.hp50 - Exemplo
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+@X 1 + 'N' STO
+X 3 ^ X 2 ^ 6 X * - +
+
+'EQ' STO
+EQ FROOTS @
+AXL       @ converte para lista
+REVLIST   @ lista reversa
+'L' STO   @ grava em L
+
+1 L SIZE  @ Loop from 1 to size list L
+FOR I     @ "I" is the local variable
+
+  IF L {I} GET 1. ==
+  THEN
+    "Um"
+  END
+NEXT      @ Repeat...
+
+@M SIZE OBJ\-> DROP 'S' STO
+
+@[0 1 2 1 -3 1]
+\>>

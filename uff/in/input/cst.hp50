@@ -1,0 +1,15 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { " = " toInteger }
+  { "TYPE"
+  \<<
+    42.2 KEYEVAL
+    15.1 KEYEVAL
+  \>>
+  }
+
+  { "p(x)" \->func }
+  { "(x)p" func\-> }
+  XQ
+}
+

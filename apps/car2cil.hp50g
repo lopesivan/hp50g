@@ -1,0 +1,30 @@
+%%HP: T(0)A(D)F(.);
+@ apps/car2cil.hp50g - Car 2cil
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+   \-> A,B,C
+   \<<
+     A 2 ^
+     B 2 ^
+     +
+     \v/
+
+     B A / ATAN
+
+     C
+
+     3 \->LIST AXL
+
+     @ 149
+     \Gh COS \Gh SIN 0
+     \Gh SIN NEG \Gh COS 0
+     0 0 1 3 3 \->matrix
+
+     A B C
+     3 \->LIST AXL
+     *
+   \>>
+\>>

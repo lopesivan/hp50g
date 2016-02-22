@@ -1,0 +1,17 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Next Prime (Joe Horn, Brian Walsh)
+@ Enter any integer n (greater than 0) and press ‘np’. The original n will be raised to level 2, and the first
+@ prime factor of n will be placed in level 1. To find the next factor, you can press / and then run ‘np’
+@ again.
+@ np
+\<< DUP \v/ \-> s
+  \<<
+    DUP 2 MOD
+    { 3 WHILE DUP2 MOD OVER s < AND REPEAT 2 + END DUP s > { DROP DUP } IFT } 2 IFTE
+  \>>
+\>>

@@ -1,0 +1,25 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { MSol inMatSol  }
+  { MSol inMatrref }
+  { 2
+  \<<
+    { 2 } \->ARRY 's1' STO
+    s1 X Y { 2 } \->ARRY LINSOLVE
+  \>>
+  }
+  { 3
+  \<<
+    { 3 } \->ARRY 's1' STO
+    s1 Y Z { 3 } \->ARRY LINSOLVE
+  \>>
+  }
+  { 4
+  \<< { 4 } \->ARRY 's1' STO
+    s1 X Y Z W { 4 } \->ARRY LINSOLVE
+  \>>
+  }
+  { n
+  \<< \->ARRY LINSOLVE \>>
+  }
+}

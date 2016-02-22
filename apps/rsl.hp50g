@@ -1,0 +1,31 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Remove a series of elements
+@ Given a list on level three and two position numbers on levels two and one, ‘RSL’ will remove the
+@ elements between the two position numbers.
+
+@ RSL
+\<<
+  3
+  DUPN
+  DROP
+  1
+  -
+  1
+  SWAP
+  SUB
+  4
+  ROLLD
+  SWAP
+  DROP
+  1
+  +
+  OVER
+  SIZE
+  SUB
+  +
+\>>

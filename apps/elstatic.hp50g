@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+@ eletrostatica.hp50g - Eletrostatica
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Eletrostatica"
+  {
+    {"Lei de Coulomb"  \<< :3: "APPS/coulomb.hp" EVAL \>> }
+    {"Anel"  \<< :3: "APPS/anel.hp" EVAL \>> }
+    {"fio fino"  \<< :3: "APPS/fio.hp" EVAL \>> }
+    {"superficie"  \<< :3: "APPS/ces.hp" EVAL \>> }
+    {"dipolo"  \<< :3: "APPS/ced.hp" EVAL \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  @23 KEYEVAL
+  @12 KEYEVAL
+\>>

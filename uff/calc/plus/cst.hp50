@@ -1,0 +1,17 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { dx
+  \<<
+    derivadafx
+  \>>
+  }
+  { Ix
+  \<<
+    integralfx
+  \>>
+  }
+  GRAD
+  DIV
+  ROT
+}
+

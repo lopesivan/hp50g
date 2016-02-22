@@ -1,0 +1,27 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Pythagoras"
+  {
+    { "hypotenuse"   \<< "H" \>> }
+    { "cathetus"     \<< "C" \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  :3: "EXTEND/pythagoras.hp"
+  RCL
+  93.3 KEYEVAL 11 KEYEVAL 11 KEYEVAL
+  22.2 KEYEVAL
+  33 KEYEVAL
+
+\>>

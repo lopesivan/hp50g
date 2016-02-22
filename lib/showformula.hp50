@@ -1,0 +1,18 @@
+showformula
+\<< \-> message
+  \<<
+    PUSH -70 SF
+    "\127\127\127\127\127Show Formula\127\127\127\127\127"
+    __TITLE__:Show Formula
+    0 \->GROB
+    message
+    0 \->GROB GROBADD
+    ""
+    0 \->GROB GROBADD
+    EQ
+    0 \->GROB GROBADD
+    SCROLL
+    POP
+  \>>
+  EQ
+\>>

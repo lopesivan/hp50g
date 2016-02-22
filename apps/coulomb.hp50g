@@ -1,0 +1,29 @@
+%%HP: T(0)A(D)F(.);
+@ coulumb.hp50g - Coulumb
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Lei de Coulomb"
+  {
+    {"formula" \<< CLEAR :3: "GRB/elc.grb"   EVAL \>> }
+    {"equation" \<< 'F(q1,q2,r21)' {'F(&A,&B,&C)' 'F21=(1/(4*\pi*@@147o))*((&A*&B)/(ABS(&C)^2))' } \|^MATCH DROP \>> }
+    {"F_2n" \<< CLEAR :3: "GRB/elcf2n.grb"   EVAL \>> }
+    {"F_total" \<< CLEAR :3: "GRB/elcft.grb"   EVAL \>> }
+    {"E_21" \<< CLEAR :3: "GRB/elce21.grb"   EVAL \>> }
+    {"E_total" \<< CLEAR :3: "GRB/elcet.grb"   EVAL \>> }
+    {"E_total" \<< CLEAR :3: "GRB/elm1.grb"   EVAL \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  @EVAL
+  @23 KEYEVAL
+  @12 KEYEVAL
+\>>

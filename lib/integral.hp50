@@ -1,0 +1,93 @@
+\->nInt
+\<< "usage: {Xi Xf}, f, {X Y Z}" \-> u
+  \<<
+    \-> ab, f, dx
+    \<<
+      IF dx SIZE 2 * ab SIZE =
+      THEN u DOERR
+      END
+
+      ab AXL 2 ab SIZE 2 / \->rdmmatrix
+      f
+
+      1 dx SIZE 1 -
+      FOR I
+        SWAP
+        dx SIZE I - 1 + COL- AXL OBJ\-> DROP SWAP
+        4 ROLL
+        dx
+        I GET
+        \.S
+      NEXT
+
+      SWAP
+      OBJ\-> DROP SWAP
+      ROT
+      dx
+      dx SIZE GET
+      \.S
+    \>>
+  \>>
+\>>
+
+\->IInt
+\<<
+  1 4
+  START
+    7 ROLL
+  NEXT
+  4 \->LIST
+  UNROT
+  2 \->LIST
+  ROT SWAP
+  \->nInt
+\>>
+
+\->IIInt
+\<<
+  1 6
+  START
+    10 ROLL
+  NEXT
+  6 \->LIST
+  5 ROLLD
+  3 \->LIST
+  \->nInt
+\>>
+
+@ @ ab
+@ Yf Xf Zf
+@ Yi Xi Zi
+@ 6 \->LIST
+@
+@ @ f
+@ X 2 ^ Y +
+@
+@ @dx
+@ Z X  Y
+@ 3 \->LIST
+@ \->nInt
+@
+
+@
+@ @ ab
+@ Yf Xf
+@ Yi Xi
+@ 4 \->LIST
+@
+@ @ f
+@ X 2 ^ Y +
+@
+@ @dx
+@ X Y
+@ 2 \->LIST
+@ \->nInt
+@
+
+@ @ ab
+@ 3 2 4
+@ 0 0 1
+@ @ f
+@ X 2 ^ Y + Z +
+@ X Y Z
+@ \->IIInt

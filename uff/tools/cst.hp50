@@ -1,0 +1,97 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "hypot"  \<< :3: "PROGRAMS/HYPOTWRAP" EVAL \>>    }
+  { "cathe"  \<< :3: "PROGRAMS/CATHETUSWRAP" EVAL \>> }
+  { "sin"  \<< :3: "PROGRAMS/SSIN" EVAL \>>   }
+  { "cos"  \<< :3: "PROGRAMS/SCOS" EVAL \>>   }
+  { ">" \<< 33 KEYEVAL \>>                            }
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"comb" \<<
+    \->STR SWAP \->STR
+    :3: "PROGRAMS/FMT2A" EVAL
+    OBJ\->
+    :3: "APPS/comb.hp" EVAL
+  \>> }
+  {"perm" \<<
+    \->STR SWAP \->STR
+    :3: "PROGRAMS/FMT2A" EVAL
+    OBJ\->
+    :3: "APPS/perm.hp" EVAL
+  \>> }
+  {"dice" \<< :3: "APPS/dice.hp" EVAL \>>           }
+  {"etp" \<< :3: "APPS/etp.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"ex" \<< :3: "APPS/ex.hp" EVAL \>>               }
+  {"iel" \<< :3: "APPS/iel.hp" EVAL \>>             }
+  {"la" \<< :3: "APPS/la.hp" EVAL \>>               }
+  {"lm" \<< :3: "APPS/lm.hp" EVAL \>>               }
+  { ">" \<< 33 KEYEVAL \>>                          }
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"ln0" \<< :3: "APPS/ln0.hp" EVAL \>>             }
+  {"lporcento" \<< :3: "APPS/lporcento.hp" EVAL \>> }
+  {"lrand" \<< :3: "APPS/lrand.hp" EVAL \>>         }
+  {"mla" \<< :3: "APPS/mla.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"mln" \<< :3: "APPS/mln.hp" EVAL \>>             }
+  {"nbits" \<< :3: "APPS/nbits.hp" EVAL \>>         }
+  {"ranl" \<< :3: "APPS/ranl.hp" EVAL \>>           }
+  {"rel" \<< :3: "APPS/rel.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"residue" \<< :3: "APPS/residue.hp" EVAL \>>     }
+  {"rl1" \<< :3: "APPS/rl1.hp" EVAL \>>             }
+  {"rln" \<< :3: "APPS/rln.hp" EVAL \>>             }
+  {"rlv" \<< :3: "APPS/rlv.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"rpl" \<< :3: "APPS/rpl.hp" EVAL \>>             }
+  {"rr1" \<< :3: "APPS/rr1.hp" EVAL \>>             }
+  {"rrn" \<< :3: "APPS/rrn.hp" EVAL \>>             }
+  {"rsl" \<< :3: "APPS/rsl.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"somaabc" \<< :3: "APPS/somaabc.hp" EVAL \>>     }
+  {"tagl" \<< :3: "APPS/tagl.hp" EVAL \>>           }
+  {"tlr" \<< :3: "APPS/tlr.hp" EVAL \>>             }
+  {"uniq" \<< :3: "APPS/uniq.hp" EVAL \>>           }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"vesphere" \<< :3: "APPS/vesphere.hp" EVAL \>>   }
+  {"gcda" \<< :3: "APPS/gcda.hp" EVAL \>>           }
+  {"gcdb" \<< :3: "APPS/gcdb.hp" EVAL \>>           }
+  {"lcm" \<< :3: "APPS/lcm.hp" EVAL \>>             }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"lgb" \<< :3: "APPS/lgb.hp" EVAL \>>             }
+  {"lg" \<< :3: "APPS/lg.hp" EVAL \>>               }
+  {"np" \<< :3: "APPS/np.hp" EVAL \>>               }
+  {"perm" \<< :3: "APPS/perm.hp" EVAL \>>           }
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+  { "<" \<< 33.2 KEYEVAL \>>                        }
+  {"pfa" \<< :3: "APPS/pfa.hp" EVAL \>>             }
+  {"pfb" \<< :3: "APPS/pfb.hp" EVAL \>>             }
+  {"wtav" \<< :3: "APPS/wtav.hp" EVAL \>>           }
+  ""
+  { ">" \<< 33 KEYEVAL \>>                          }
+
+@ ----------------------------------------------------------------------------
+}

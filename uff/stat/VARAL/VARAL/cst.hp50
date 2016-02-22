@@ -1,0 +1,46 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  \GSDAT
+  { "M m*n"
+  \<<
+    inMat '\GSDAT' STO
+  \>>
+  }
+  { "\Gm"
+  \<< 0. 0. \-> M L C
+    \<<
+      M SIZE { L C } STO M AXL OBJ\-> DROP \PILIST SWAP 3 L
+      FOR I
+        \PILIST + SWAP
+      NEXT
+      \PILIST + "\Gm" \->TAG
+    \>>
+  \>>
+  }
+  { "\Gs ^ 2"
+  \<< 0. 0. \-> M L C
+    \<<
+      M SIZE { L C } STO M 1 COL- AXL SWAP DROP M AXL OBJ\-> DROP \PILIST SWAP 3 L
+      FOR I
+        \PILIST + SWAP
+      NEXT
+      \PILIST + - DUP DUP * SWAP \GSDAT AXL SWAP ADD SWAP ADD AXL 2 3 CSWP 3 4 CSWP DUP 1 COL- DROP 1 COL- DROP 1 COL- AXL SWAP 1 COL- AXL SWAP DROP * SWAP AXL SWAP ADD AXL DUP 5 COL- SWAP DROP AXL \GSLIST "\Gs ^ 2" \->TAG
+    \>>
+  \>>
+  }
+  { "\Gs"
+  \<< 0. 0. \-> M L C
+    \<< M SIZE { L C } STO M 1 COL- AXL SWAP DROP M AXL OBJ\-> DROP \PILIST SWAP 3 L
+      FOR I
+        \PILIST + SWAP
+      NEXT
+      \PILIST + - DUP DUP * SWAP \GSDAT AXL SWAP ADD SWAP ADD AXL 2 3 CSWP 3 4 CSWP DUP 1 COL- DROP 1 COL- DROP 1 COL- AXL SWAP 1 COL- AXL SWAP DROP * SWAP AXL SWAP ADD AXL DUP 5 COL- SWAP DROP AXL \GSLIST \v/ "\Gs" \->TAG
+    \>>
+  \>>
+  }
+  { "H"
+  \<<
+    p X
+  \>>
+  }
+}

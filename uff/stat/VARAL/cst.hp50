@@ -1,0 +1,11 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  VARAL
+  UNIFORME
+  BINOMIAL
+  GEOM
+  BINEG
+  HGEOM
+  POISSON
+  NORM
+}

@@ -1,0 +1,43 @@
+%%HP: T(0)A(D)F(.);
+@ sfasor.hp50g - Sfasor
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+
+@63.18 84.24 13   Modulos
+@-10 80 -100      fases
+@3                3 entradas
+DUP DUP
+2 + ROLLD
+\->LIST
+SWAP DUP UNROT
+2 + ROLLD
+\->LIST
+2 \v/ /
+SWAP
+
+    \-> Ms, Angles
+    \<<
+        1 Ms SIZE \->Q
+        FOR I
+            Ms I GET
+            Angles I GET
+            \-> M, TETHA
+            \<<
+                CYLIN DEG '(M, \<) TETHA)' EVAL
+            \>>
+        NEXT
+
+        1 Ms SIZE 1 - \->Q
+        START
+             +
+        NEXT
+
+        DUP
+        ABS 2 \v/ * \->NUM "ABS" \->TAG
+        D\<-\->R
+    \>>
+
+\>>

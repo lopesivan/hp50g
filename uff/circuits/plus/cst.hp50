@@ -1,0 +1,8 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  complex
+  { "GROB" \<< :3: "APPS/circuit.hp" EVAL \>> }
+  { "\GD\173Y" \<<  :3: "APPS/estrela_delta.hp" EVAL\>> }
+  { "Y\173\GD" \<<  :3: "APPS/delta_estrela.hp" EVAL \>> }
+  \GSDAT
+}

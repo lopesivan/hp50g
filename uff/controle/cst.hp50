@@ -1,0 +1,42 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "<--"   \<< \->LIST  \>> }
+  {"ROUTH" \<< 93.3 KEYEVAL 12 KEYEVAL 11 KEYEVAL\>>}
+  { "pfrac"   fp }
+  {"ex"
+  \<<
+    "exemplo 1"
+    X 1 +
+
+    X
+    X 2 -
+    X 2 -
+    X 2 - * * *
+
+    "exemplo 2"
+    X 1 +
+
+    X
+    X 2 -
+    X 3 + * *
+
+    "exemplo 3"
+    X 2 + 3 ^
+    X 1 +
+  \>>}
+  { ">" \<< 33 KEYEVAL \>>}
+  @ ---------------------------------------------
+  { "A\->B" \<< 2 \->LIST | \>> }
+  { "i\->k" \<< i SWAP 2 \->LIST \|^MATCH \>>}
+  { "P(A)" PEVAL              }
+  { "B - A" PREVAL }
+  ""
+  { ">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  {"ctl1" \<< :3: "APPS/ctrl1.hp" EVAL \>> }
+  {"ctl2" \<< :3: "APPS/ctrl2.hp" EVAL \>> }
+  {"ctl3" \<< :3: "APPS/ctrl3.hp" EVAL \>> }
+  {"ctl4" \<< :3: "APPS/ctrl4.hp" EVAL \>> }
+  ""
+  { "<" \<< 33 KEYEVAL \>>}
+}

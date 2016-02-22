@@ -1,0 +1,8 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { op \<< 82.2 KEYEVAL 13.1 KEYEVAL \>> }
+  { "L{f}" l }
+  { "FRAC" PARTFRAC }
+  {"TABLE" \<< laplaceTable \>> }
+  LDEC
+}

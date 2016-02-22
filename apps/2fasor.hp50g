@@ -1,0 +1,43 @@
+%%HP: T(0)A(D)F(.);
+@ 2fasor.hp50g - 2fasor
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+"Fasores de tensao e corrente:"
+{":rms:
+:arco:
+:W:
+:phi:"
+{1, 0}V } INPUT OBJ\->
+SWAP t * SWAP + EVAL SWAP
+OBJ\-> DROP
+"" + + OBJ\-> *
+DUP
+
+OBJ\-> DROP2
+OBJ\-> SWAP DROP
+
+\->STR DUP
+IF "'" POS 1 ==
+THEN DUP SIZE 1 - 2 SWAP SUB
+END
+
+IF "SIN" ==
+THEN
+ t 0 = SUBST EVAL
+ SWAP 2 \v/ / \->NUM SWAP
+ELSE
+ t 0 = SUBST EVAL
+ 90 +
+ SWAP 2 \v/ / \->NUM SWAP
+END
+
+\-> M, TETHA
+\<<
+    toFloat
+    CYLIN DEG '(M, \<) TETHA)' EVAL
+\>>
+
+\>>

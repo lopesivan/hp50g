@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Calculate average of list elements
+@ Given a list of reals, ‘LA’ returns a real that is the average of the values in the list.
+
+@ LA
+\<<
+  ΣLIST LASTARG SIZE /
+\>>

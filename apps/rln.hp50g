@@ -1,0 +1,25 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Rotate elements left N elements
+@ Given a list on level two and the number of elements to rotate left on level one, ‘RLN’ will rotate the
+@ elements in the list.
+
+@ RLN
+\<<
+  1 +
+  OVER
+  SIZE
+  SUB
+  LASTARG
+  DROP
+  1
+  -
+  1
+  SWAP
+  SUB
+  +
+\>>

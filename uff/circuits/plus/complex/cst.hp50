@@ -1,0 +1,42 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { " = " toInteger }
+  { " ~ " toFloat   }
+  typing
+  { "a b"
+  \<< \-> a, b
+    \<<
+      DEG RECT '(a, b)' EVAL
+    \>>
+  \>>
+  }
+{">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { "M\<)\Gh" \<< \-> M, TETHA \<< CYLIN DEG '(M, \<) TETHA)' EVAL \>> \>> }
+  { "fasor" :3: "APPS/2fasor.hp" EVAL  }
+  { "rms" \<< 2 \v/ / \->NUM \>>  }
+  XY\<-\->P
+  D\<-\->R
+  {">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { "\133 F" :3: "APPS/sfasor.hp" EVAL  }
+  { "V_R" :3: "APPS/vr.hp" EVAL  }
+  { "V_L" :3: "APPS/vl.hp" EVAL  }
+  { "V_C" :3: "APPS/vc.hp" EVAL  }
+  { "Z//" \<< :3: "APPS/resistencia_paralelo.hp" EVAL \>>}
+  {">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { "X_L" :3: "APPS/xl.hp" EVAL  }
+  { "X_C" :3: "APPS/xc.hp" EVAL  }
+  { "R" :3: "APPS/r.hp" EVAL  }
+  { "L" :3: "APPS/l.hp" EVAL  }
+  { "C" :3: "APPS/c.hp" EVAL  }
+  {">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { "cplx1" :3: "APPS/fcplx1.hp" EVAL  }
+  { "cplx2" :3: "APPS/fcplx.hp" EVAL  }
+  ""
+  ""
+  ""
+  {">" \<< 33 KEYEVAL \>>}
+}

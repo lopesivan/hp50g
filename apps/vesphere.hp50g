@@ -1,0 +1,11 @@
+%%HP: T(0)A(D)F(.);
+@ vesphere.hp50g - Vesphere
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+@ Volume da esfera
+\<<
+"Radius of Sphere?"
+":R:"
+INPUT OBJ\-> 3 ^ 4 3 / \pi * SWAP *
+\>>

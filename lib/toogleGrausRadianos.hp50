@@ -1,0 +1,9 @@
+D\<-\->R
+\<< -18 CF -17 FS? \-> X
+  \<<
+    IF 'X'
+    THEN DEG
+    ELSE RAD
+    END
+  \>>
+\>>

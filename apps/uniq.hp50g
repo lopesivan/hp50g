@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ apps/uniq.hp50g - Uniq
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  LIST\-> { }
+  1 ROT
+  START
+    SWAP
+    IF DUP2 POS
+    THEN
+      DROP
+    ELSE
+      +
+    END
+  NEXT
+\>>

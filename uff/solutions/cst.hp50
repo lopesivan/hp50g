@@ -1,0 +1,23 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  solve
+  zeros
+  factor
+  trig
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  {"slin" ls                  }
+  { " = " toInteger           }
+  { "Eq234"  \<< :3: "PROGRAMS/EQWRAP" EVAL \>> }
+  { "hypot"  \<< :3: "PROGRAMS/HYPOTWRAP" EVAL \>> }
+  { "cathe"  \<< :3: "PROGRAMS/CATHETUSWRAP" EVAL \>> }
+  {">" \<< 33 KEYEVAL \>>     }
+
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  { facts FACTORS             }
+  { "<-+->" EXPAND            }
+  {"+ mod" EXPANDMOD          }
+  {"- mod" FACTORMOD          }
+  {"<" \<< 33 KEYEVAL \>>     }
+}

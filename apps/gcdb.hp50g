@@ -1,0 +1,15 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ GCDb
+\<<
+  WHILE
+    DUP2
+  REPEAT
+    MOD SWAP
+  END
+  DROP2
+\>>

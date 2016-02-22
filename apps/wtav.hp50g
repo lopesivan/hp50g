@@ -1,0 +1,14 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Weighted Average (Joe Horn)
+@[weights] [data] \-> weighted mean
+@e.g.
+@[20 20 20 40] [75 80 85 90] \-> 84
+@(total=100%) scores \->
+@result
+@ WTAV
+\<< OVER DOT SWAP CNRM / \>>

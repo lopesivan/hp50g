@@ -1,0 +1,9 @@
+usetf
+\<< \-> x
+    \<<
+      IF x FC?
+      THEN 0.
+      ELSE x CF
+      END
+    \>>
+\>>

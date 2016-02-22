@@ -1,0 +1,8 @@
+Xn
+\<< \-> str, N
+    \<< 1 N
+      FOR I
+        str I + OBJ\->
+      NEXT
+    \>>
+\>>

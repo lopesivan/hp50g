@@ -1,0 +1,67 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Apps"
+  {
+    {"apps" \<< :3: "APPS/apps.hp" \>> }
+    {"comb" \<< :3: "APPS/comb.hp" \>> }
+    {"dice" \<< :3: "APPS/dice.hp" \>> }
+    {"etp" \<< :3: "APPS/etp.hp" \>> }
+    {"exemplo" \<< :3: "APPS/exemplo.hp" \>> }
+    {"ex" \<< :3: "APPS/ex.hp" \>> }
+    {"games" \<< :3: "APPS/games.hp" \>> }
+    {"gcda" \<< :3: "APPS/gcda.hp" \>> }
+    {"gcdb" \<< :3: "APPS/gcdb.hp" \>> }
+    {"grobs" \<< :3: "APPS/grobs.hp" \>> }
+    {"iel" \<< :3: "APPS/iel.hp" \>> }
+    {"la" \<< :3: "APPS/la.hp" \>> }
+    {"lcm" \<< :3: "APPS/lcm.hp" \>> }
+    {"lgb" \<< :3: "APPS/lgb.hp" \>> }
+    {"lg" \<< :3: "APPS/lg.hp" \>> }
+    {"lm" \<< :3: "APPS/lm.hp" \>> }
+    {"ln0" \<< :3: "APPS/ln0.hp" \>> }
+    {"lporcento" \<< :3: "APPS/lporcento.hp" \>> }
+    {"lrand" \<< :3: "APPS/lrand.hp" \>> }
+    {"mla" \<< :3: "APPS/mla.hp" \>> }
+    {"mln" \<< :3: "APPS/mln.hp" \>> }
+    {"nbits" \<< :3: "APPS/nbits.hp" \>> }
+    {"np" \<< :3: "APPS/np.hp" \>> }
+    {"perm" \<< :3: "APPS/perm.hp" \>> }
+    {"pfa" \<< :3: "APPS/pfa.hp" \>> }
+    {"pfb" \<< :3: "APPS/pfb.hp" \>> }
+    {"programs" \<< :3: "APPS/programs.hp" \>> }
+    {"pythagoras" \<< :3: "APPS/pythagoras.hp" \>> }
+    {"ranl" \<< :3: "APPS/ranl.hp" \>> }
+    {"rel" \<< :3: "APPS/rel.hp" \>> }
+    {"residue" \<< :3: "APPS/residue.hp" \>> }
+    {"rl1" \<< :3: "APPS/rl1.hp" \>> }
+    {"rln" \<< :3: "APPS/rln.hp" \>> }
+    {"rlv" \<< :3: "APPS/rlv.hp" \>> }
+    {"rpl" \<< :3: "APPS/rpl.hp" \>> }
+    {"rr1" \<< :3: "APPS/rr1.hp" \>> }
+    {"rrn" \<< :3: "APPS/rrn.hp" \>> }
+    {"rsl" \<< :3: "APPS/rsl.hp" \>> }
+    {"somaabc" \<< :3: "APPS/somaabc.hp" \>> }
+    {"tagl" \<< :3: "APPS/tagl.hp" \>> }
+    {"tlr" \<< :3: "APPS/tlr.hp" \>> }
+    {"uniq" \<< :3: "APPS/uniq.hp" \>> }
+    {"vesphere" \<< :3: "APPS/vesphere.hp" \>> }
+    {"wtav" \<< :3: "APPS/wtav.hp" \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+
+@  RCL
+@  93.3 KEYEVAL 11 KEYEVAL 11 KEYEVAL
+\>>

@@ -1,0 +1,16 @@
+%%HP: T(0)A(D)F(.);
+@ resistencia_paralelo.hp50g - Resistencia Paralelo
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  2 DUPN
+  INV SWAP
+  INV
+  +
+  INV SWAP
+  DROP
+  SWAP
+  DROP
+\>>

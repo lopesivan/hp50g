@@ -1,0 +1,60 @@
+%%HP: T(0)A(D)F(.);
+@ apps/car2es.hp50g - Car 2es
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+   \-> A,B,C
+   \<<
+     A 2 ^
+     B 2 ^
+     +
+     \v/
+
+     B A / ATAN
+
+     C
+
+     3 \->LIST AXL
+
+     @ 149
+     \Gh COS \Gh SIN 0
+     \Gh SIN NEG \Gh COS 0
+     0 0 1 3 3 \->matrix
+
+     A B C
+     3 \->LIST AXL
+     *
+   \>>
+
+   \-> A,B,C
+   \<<
+     A 2 ^
+     B 2 ^
+     C 2 ^
+     +
+     +
+     \v/
+
+     A 2 ^
+     B 2 ^
+     +
+     \v/
+     C
+     /
+     ATAN
+
+     B A / ATAN
+
+     \Gh SIN 0 \Gh COS
+     \Gh COS 0 \Gh SIN NEG
+     0 1 0 3 3 \->matrix
+
+     A B C
+     3 \->LIST AXL
+     *
+   \>>
+
+\>>
+

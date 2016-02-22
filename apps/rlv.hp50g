@@ -1,0 +1,16 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Return lowest (or highest) value of a list
+
+@ RLV
+\<<
+  LIST\->
+  2 SWAP
+  START
+    MIN
+  NEXT
+\>>

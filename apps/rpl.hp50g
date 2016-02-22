@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Replace a list object with another (or others)
+@ RPL
+\<<
+  \-> p r
+  \<<
+    LIST\->
+    \-> t
+    \<<
+      t 1 + p -
+      ROLL
+      LASTARG
+      r
+      SWAP
+      ROT
+      DROP
+      ROLLD
+      t \->LIST
+    \>>
+  \>>
+\>>

@@ -1,0 +1,15 @@
+%%HP: T(0)A(D)F(.);
+@ versor.hp50g - Versor
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+@   A Origem
+@   B Destino
+
+    3 \->LIST AXL 4 ROLLD
+    3 \->LIST AXL
+    -
+    DUP ABS /
+\>>

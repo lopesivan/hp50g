@@ -1,0 +1,16 @@
+%%HP: T(0)A(D)F(.);
+@ myapps.hp50g - Myapps
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+    \-> A
+    \<<
+        "EXTEND/" A ".hp" + +
+        3 \->TAG
+        RCL
+        PrRUN
+    \>>
+    @93.3 KEYEVAL 11 KEYEVAL 11 KEYEVAL
+\>>

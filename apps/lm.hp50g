@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Calculate median of list elements
+@ Given a list of reals, ‘LM’ returns a real that is the median of the elements in the list.
+
+@ LM
+\<<
+  SORT
+  DUP
+  SIZE
+  1
+  +
+  2
+  /
+  GET
+  LASTARG
+  FLOOR
+  GET
+  +
+  2
+  /
+\>>

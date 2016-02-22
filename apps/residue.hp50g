@@ -1,0 +1,84 @@
+%%HP: T(0)A(D)F(.);
+@ residue.hp50g - Residue
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  DUP2
+  \-> N, D
+  \<<
+
+    IF D func\-> AXL SIZE N func\-> AXL SIZE >
+    THEN
+
+      N D / 'H' STO @ função de transferência
+
+      D FROOTS  @ array com raizes e multiplicidade
+      AXL       @ converte para lista
+      REVLIST   @ lista reversa
+      'L' STO   @ grava em L
+
+      L SIZE 1
+      FOR  I
+
+        IF L I 1 - GET 1. ==
+        THEN
+          L {I} GET 'POLO' STO
+          X POLO -   @ s - p
+          H *        @ (s-p)*H(s)
+          EXPAND
+          POLO LIMIT @ Lim (s-p)*H(s)
+                     @  x -> p
+          X POLO - EXPAND /
+        ELSE
+          L {I} GET 'POLO' STO
+          X POLO -   L I 1 - GET ^ @ (s - p)^m
+          H *        @ (s-p)^m * H(s)
+          EXPAND
+
+          1 L I 1 - GET 1 -
+          START
+            DUP
+            POLO LIMIT
+            SWAP
+            DERVX
+          NEXT    @ Repeat...
+
+          POLO LIMIT
+
+          L I 1 - GET \->ARRY
+
+          X POLO -
+          1 L I 1 - GET @ Loop from 1 to index_to
+          START
+            1
+          NEXT    @ Repeat...
+          L I 1 - GET \->ARRY
+          *
+          L I 1 - GET 1 @ Loop from 1 to index_to
+          FOR k  @ "k" is the local variable
+            k
+          -1
+          STEP
+          L I 1 - GET \->ARRY
+          vectorExp vectorDivide
+          OBJ\-> OBJ\-> - 1 SWAP
+          START
+            +
+          NEXT    @ Repeat...
+        END
+
+        -2
+      STEP
+
+      1 L SIZE 2 / 1 -
+      START
+        +
+      NEXT    @ Repeat...
+    ELSE
+      N D DIV2 D / +
+    END
+  \>>
+  {H L POLO} PURGE
+\>>

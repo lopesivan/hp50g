@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Permutations
+@ perm(n,r) replaces all perm(n,r) with n!/(n-r)! according to the mathematical definition.
+@ perm
+\<<
+  { 'F(&A,&B)' '&A!/(&A-&B)! ' } \|^MATCH
+  DROP
+\>>

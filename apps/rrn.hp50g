@@ -1,0 +1,32 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Rotate elements right N elements
+@ Given a list on level two and the number of elements to rotate right on level one, ‘RRN’ will rotate the
+@ elements in the list.
+
+@ RRN
+\<<
+  SWAP
+  LIST\->
+  DUP
+  2
+  +
+  ROLL
+  1
+  -
+  OVER
+  MOD
+  1
+  +
+  1
+  SWAP
+  START
+  ROLLD
+  LASTARG
+  NEXT
+  \->LIST
+\>>

@@ -1,0 +1,30 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Games"
+  {
+    { "daleks"   \<< :3: "EXTEND/daleks.hp"  \>> }
+    { "laby"     \<< :3: "EXTEND/laby.hp"    \>> }
+    { "lchess"   \<< :3: "EXTEND/lchess.hp"  \>> }
+    { "life"     \<< :3: "EXTEND/life.hp"    \>> }
+    { "qix"      \<< :3: "EXTEND/qix.hp"     \>> }
+    { "sudoku"   \<< :3: "EXTEND/sudoku.hp"  \>> }
+    { "tetris"   \<< :3: "EXTEND/tetris.hp" \>> }
+    { "hump"     \<< :3: "EXTEND/hump.hp"    \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+   RCL
+   93.3 KEYEVAL 11 KEYEVAL 11 KEYEVAL
+\>>
+

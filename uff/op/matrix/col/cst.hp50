@@ -1,0 +1,9 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  {"<--" COL\->  }
+  {"-->" \->COL  }
+  {"+"   COL+    }
+  {"-"   COL-    }
+  {"SWAP"  CSWP  }
+}
+

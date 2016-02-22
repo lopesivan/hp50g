@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+@ spacef.hp50g - Spacef
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@  { "\->V3" \<< 3 \->LIST AXL \>> }
+@  { "\Gn" \<< DUP ABS / \>> }
+
+\<<
+@   M  MODULO
+@   A Origem
+@   B Destino
+
+    3 \->LIST AXL 4 ROLLD
+    3 \->LIST AXL
+    -
+
+    DUP ABS /
+    DUP  \->NUM
+    3 PICK
+    *
+    DUP
+    4 ROLL /
+    AXL ACOS
+\>>

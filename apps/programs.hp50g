@@ -1,0 +1,28 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "C Programs"
+  {
+    { "Hi!"         \<< :3: "PROGRAMS/HIWRAP"  \>> }
+    { "data types"  \<< :3: "PROGRAMS/DTWRAP"  \>> }
+    { "message"     \<< :3: "PROGRAMS/MSGWRAP" \>> }
+    { "rpl stack"   \<< :3: "PROGRAMS/RSWRAP"  \>> }
+    { "freemem"     \<< :3: "PROGRAMS/FMWRAP"  \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+
+@  RCL
+@  93.3 KEYEVAL 11 KEYEVAL 11 KEYEVAL
+\>>

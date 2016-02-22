@@ -1,0 +1,34 @@
+@ oprações com vetores linha
+@
+@ [1 2 3 4]
+@   [2 2 2 4]
+@   vector÷
+@   vector^
+@   vector*
+@   vector.
+@
+vectorDivide
+\<<
+  AXL SWAP AXL SWAP / AXL
+\>>
+
+vectorExp
+\<<
+  AXL SWAP AXL SWAP ^ AXL
+\>>
+
+vectorMultiply
+\<<
+  HADAMARD
+\>>
+
+vector\GS
+\<<
+  AXL \GSLIST EVAL
+\>>
+
+vector.
+\<<
+  SWAP TRAN * TRACE EVAL
+\>>
+

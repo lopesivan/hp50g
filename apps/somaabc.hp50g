@@ -1,0 +1,14 @@
+%%HP: T(0)A(D)F(.);
+@ apps/somaabc.hp50g - Somaabc
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+"Enter values of A,B and C:"
+{":A:
+:B:
+:C:"
+{1, 0}V } INPUT OBJ\->
++ +
+\>>

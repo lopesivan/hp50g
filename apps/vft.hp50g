@@ -1,0 +1,68 @@
+%%HP: T(0)A(D)F(.);
+@ vft.hp50g - Vft
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+@    q1 q2 q3 q4
+@    x1 y1 z1
+@    x2 y2 z2
+@    x3 y3 z3
+@    x4 y4 z4
+@
+@    4
+    'n' STO
+
+    0 n 1 -
+    FOR I
+        3 \->LIST AXL
+        n 3 * 2 - 3 I * - ROLLD
+    NEXT
+
+    'r1' STO
+
+    0 n 2 -
+    FOR I
+        n 2 * 1 - I - ROLLD
+    NEXT
+
+    n \->LIST AXL
+    'q' STO
+
+    0 2
+    FOR J
+        r1 SWAP -
+        'r21' STO
+
+        r21
+        DUP ABS /
+        'versor' STO
+
+        1 4 \pi E0 * * /
+        q  n J - 1 \->LIST GET
+        q {1} GET
+        * *
+
+        versor
+        r21 ABS 2 ^
+        /
+        *
+
+        n 1 - ROLLD
+    NEXT
+
+    1 n 2 -
+    START
+         +
+    NEXT
+
+    {n} PURGE
+    {versor} PURGE
+    {q} PURGE
+    {r1} PURGE
+    {r21} PURGE
+
+    \->COL
+    DROP
+\>>

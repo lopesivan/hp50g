@@ -1,0 +1,12 @@
+%%HP: T(0)A(D)F(.);
+@ desolve.hp50g - Desolve
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@2: ['d1y(t) = 2*t' 'y(0) = 4']
+@1: 'y(t)'
+@DESOLVE
+\<<
+
+\>>

@@ -1,0 +1,13 @@
+%%HP: T(0)A(D)F(.);
+@ divisor_corrente.hp50g - Divisor Corrente
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  3 DUPN DUP UNROT
+  + / *
+  SWAP DROP
+  SWAP DROP
+  SWAP DROP
+\>>

@@ -1,0 +1,20 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { Z
+  \<< \-> A B C
+    \<<
+      A B - C /
+    \>>
+  \>>
+  }
+  { "N DISTR"
+  \<< \-> Z
+    \<<
+      IF Z 0. >
+      THEN 0. 1. Z UTPN 1. SWAP -
+      ELSE 0. 1. Z NEG UTPN
+      END
+    \>>
+  \>>
+  }
+}

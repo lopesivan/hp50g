@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Prime Factors (Joe Horn, Brian Walsh)
+@ If you want to find all the prime factors of n, run ‘pf’. It replaces n with a list of its prime factors. (Calls ‘np’
+@ above.)
+
+@ pfa
+\<<
+  { } SWAP
+  DO
+    np ROT OVER + ROT ROT / DUP 1 SAME
+    UNTIL
+  END
+  DROP
+\>>

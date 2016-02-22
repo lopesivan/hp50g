@@ -1,0 +1,37 @@
+%%HP: T(0)A(D)F(.);
+@ vfc.hp50g - Vfc
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+@    q1
+@    x1 y1 z1
+@    q2
+@    x2 y2 z2
+
+    3 \->LIST AXL
+    SWAP
+    5 ROLLD
+    4 ROLLD
+    3 \->LIST AXL
+
+    -
+    DUP
+    'r21' STO
+
+    DUP ABS /
+    'versor' STO
+
+    1 4 \pi E0 * * /
+    3 ROLLD
+    * *
+
+    versor
+    r21 ABS 2 ^
+    /
+    *
+
+    \->COL
+    DROP
+\>>

@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ fcplx1.hp50g - Fcplx 1
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+    OBJ\-> DROP DROP
+    DUP
+
+    NEG
+
+    DUP
+    3 ROLLD
+    * EVAL
+    UNROT
+    * EVAL
+    SWAP /
+\>>

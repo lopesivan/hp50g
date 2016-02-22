@@ -1,0 +1,21 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { op \<< 82.2 KEYEVAL 13.1 KEYEVAL \>> }
+@ { "L{f}" 'F(s)=\.S(0,\oo,EXP(-s*t)*f(t),t)' }
+  { "L{f}"
+  \<<
+    "Laplace" showformula
+  \>>
+  }
+  { "L"
+  \<<
+    LAP X s = SUBST
+  \>>
+  }
+  { "L\175\185"
+  \<<
+    s X = SUBST ILAP
+  \>>
+  }
+  { "t^N-\189" lp1 }
+}

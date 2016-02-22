@@ -1,0 +1,28 @@
+%%HP: T(0)A(D)F(.);
+@ apps/somaabc.hp50g - Somaabc
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+"Modulo, Z@@128, projecao @@128:"
+{":F:
+:PHI:
+:THETA:"
+{1, 0}V } INPUT OBJ\->
+
+
+\-> F, phi, theta
+\<<
+    F phi SIN theta COS * *
+    F phi SIN theta SIN * *
+    F phi COS *
+
+    3 \->LIST AXL
+    DUP
+    \->NUM
+    DUP F /
+    AXL ACOS
+\>>
+
+\>>

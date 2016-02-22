@@ -1,0 +1,8 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  OVER
+  ROLL
+  ROLLD
+  ROT
+  UNROT
+}

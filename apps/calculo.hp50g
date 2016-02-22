@@ -1,0 +1,39 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Calculo"
+  {
+    {"derivada a^nx"         \<< :3: "GRB/d_anx.grb"        \>> }
+    {"integral a^nx"         \<< :3: "GRB/i_anx.grb"        \>> }
+    {"derivada log x^n na base b"    \<< :3: "GRB/d_logxnbaseb.grb" \>> }
+    {"integral log x^n na base b"    \<< :3: "GRB/i_logxnbaseb.grb" \>> }
+    {"derivada ln x^n"      \<< :3: "GRB/d_lnxn.grb"       \>> }
+    {"integral ln x^n"      \<< :3: "GRB/i_lnxn.grb"       \>> }
+    {"integral sin^n"        \<< :3: "GRB/i_senn.grb"       \>> }
+    {"integral cos^n"        \<< :3: "GRB/i_cosn.grb"       \>> }
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+
+  @DO UNTIL KEY END
+
+  LoadCST
+
+  33 KEYEVAL
+  33 KEYEVAL
+  33 KEYEVAL
+\>>
+

@@ -1,0 +1,18 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Fill a list with zeros (or digit 1-9)
+@ Given a real number of zeros on level one, ‘LN0’ will create a list of N zeros. Use short form digits ±1 to
+@ ±9 in place of 0 in the program if desired.
+
+@ LN0
+\<<
+  1 \->LIST
+  0 CON
+  ARRY\->
+  EVAL
+  \->LIST
+\>>

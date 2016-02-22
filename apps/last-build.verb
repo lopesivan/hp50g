@@ -1,0 +1,308 @@
+  ; dice.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\dice.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, dice.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; etp.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\etp.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, etp.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; exemplo.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\exemplo.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, exemplo.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; ex.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\ex.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, ex.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; iel.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\iel.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, iel.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; la.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\la.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, la.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; lm.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\lm.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, lm.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; ln0.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\ln0.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, ln0.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; lporcento.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\lporcento.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, lporcento.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; lrand.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\lrand.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, lrand.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; mla.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\mla.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, mla.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; mln.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\mln.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, mln.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; nbits.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\nbits.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, nbits.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; ranl.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\ranl.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, ranl.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rel.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rel.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rel.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; residue.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\residue.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, residue.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rl1.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rl1.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rl1.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rln.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rln.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rln.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rlv.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rlv.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rlv.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rpl.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rpl.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rpl.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rr1.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rr1.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rr1.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rrn.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rrn.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rrn.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; rsl.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\rsl.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, rsl.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; somaabc.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\somaabc.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, somaabc.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; tagl.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\tagl.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, tagl.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; tlr.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\tlr.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, tlr.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; uniq.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\uniq.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, uniq.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4
+  ; vesphere.hp
+  Send, {LCtrl Down}o{LCtrl Up}
+  Send, Z:\workspace\hp50g\programs\main\apps\vesphere.hpprg
+  Send, {enter 2}
+  Send, {LAlt Down}a{LAlt Up}
+  Send, {down 8}
+  Send, {enter}
+  Send, vesphere.hp
+  Send, {enter 2}
+  Send, {LAlt Down}F4{LAlt Up}
+  Send !{f4} ; Simulates the keypress alt+f4

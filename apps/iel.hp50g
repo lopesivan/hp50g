@@ -1,0 +1,15 @@
+@ Insert an element into a list
+@ IEL
+\<<
+  \-> p r
+  \<<
+    LIST\->
+    \-> t
+    \<<
+      r t 2 + p -
+      ROLLD
+      t 1 +
+      \->LIST
+    \>>
+  \>>
+\>>

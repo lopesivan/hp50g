@@ -1,0 +1,38 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "<--"   \<< \->ARRY  \>> }
+  { "p(x)" \->func }
+  { "(x)p" func\-> }
+  XQ
+  {">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { "L{f}" l }
+  { "FRAC" PARTFRAC }
+  {"residue" \<< :3: "APPS/residue.hp" EVAL \>> }
+  { pfrac PARTFRAC            }
+  R\<-\->C
+  {">" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  { facts FACTORS             }
+  { "<-+->" EXPAND             }
+  {"+ mod" EXPANDMOD}
+  {"- mod" FACTORMOD}
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  EXPLN
+  EXP2POW
+  {"i\->k" \<< i SWAP 2 \->LIST \|^MATCH \>>}
+  { "A\->B" \<< 2 \->LIST | \>> }
+  {">" \<< 33 KEYEVAL \>>     }
+
+@ ----------------------------------------------------------------------------
+  {"\:-"   vectorDivide }
+  {"*"     vectorMultiply   }
+  {"^"     vectorExp   }
+  {"\GS"   vector\GS }
+  {"DOT"   \<< vectorMultiply vector\GS \>> }
+  {"<" \<< 33 KEYEVAL \>>}
+
+}

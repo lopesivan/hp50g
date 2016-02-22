@@ -1,0 +1,68 @@
+%%HP: T(0)A(D)F(.);
+@ ctrl1.hp50g - Ctrl 1
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@
+@ m * y`` + b * y` + k * y =  u
+@
+@
+\<<
+    \-> m, b, k, u
+    \<<
+        0 1
+        k m / NEG
+        b m / NEG
+        2 2
+        2 \->LIST \->ARRY
+        'A' STO
+
+        0 1 m /
+        2 1
+        2 \->LIST \->ARRY
+        'B' STO
+
+        1 0
+        1 2
+        2 \->LIST \->ARRY
+        'C' STO
+
+        s 2 IDN * A - 'M' STO
+
+        "A" A "B" B "C" C
+        "M" M
+
+        "G(s)=Y(s)/U(s)" C M INV B * *
+        OBJ\-> DROP EVAL
+
+        {A B C M} PURGE
+
+        d1X1 X2 =
+        d1X2 b m / NEG X2 * k m / NEG X1 * u m / + + =
+
+@        '-((e^(
+@            t*(
+@                -\v/(
+@                    b^2-4*k*m
+@                )
+@                /
+@                (2*m)-b/(2*m)
+@            )
+@        )
+@        )
+@        -(e^(
+@            t*(
+@                \v/(
+@                    b^2-4*k*m
+@                )
+@                /
+@                (2*m)-b/(2*m)
+@            )
+@        )
+@        ))
+@        /\v/(b^2-4*k*m)'
+    \>>
+\>>
+
+

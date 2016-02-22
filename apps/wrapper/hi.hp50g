@@ -1,0 +1,30 @@
+%%HP: T(3)A(R)F(.);
+
+DIR
+@  $VISIBLE { PrRUN }
+@  $CONFIG 1
+@  $ROMID 1313
+@  $TILE "EXTEND"
+
+  HI
+  \<<
+    \->STR
+    :3: "EXTEND/hi.hp" RCL PrRUN
+    IF
+    THEN
+      DOERR
+    END
+  \>>
+
+  DTYPES
+  \<<
+    \->STR
+    :3: "EXTEND/dtypes.hp" RCL PrRUN
+    IF
+    THEN
+      DOERR
+    END
+  \>>
+
+END
+

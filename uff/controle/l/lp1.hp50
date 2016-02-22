@@ -1,0 +1,19 @@
+lp1
+\<< 0 1 \-> n T P
+  \<<
+    n 1 2 / + \->NUM
+    'n' STO
+    2 n ^ \->Q
+    'd1' STO
+    X n 1 2 / + ^
+    \->Q
+    'd2' STO
+    WHILE n 1 \>=
+    REPEAT
+      2 n * 1 - \->Q 'T' STO T T 'P' STO* 'n' 1 STO-
+    END
+    P \PI \v/ * d1 d2 * /
+    { d1 d2 } PURGE
+    X s = SUBST
+  \>>
+\>>

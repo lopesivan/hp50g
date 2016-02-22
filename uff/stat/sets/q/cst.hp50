@@ -1,0 +1,8 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  \->Q
+  XQ
+  \->Q\pi
+  \->Q
+  \->NUM
+}

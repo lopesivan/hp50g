@@ -1,0 +1,18 @@
+%%HP: T(0)A(D)F(.);
+@ dcos.hp50g - Dcos
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+
+
+\<< "usage: N, angle" \-> u
+  \<<
+    \-> module, angle
+    \<<
+      module angle SIN * \->NUM
+      module angle COS * \->NUM
+      2 \->LIST AXL
+    \>>
+  \>>
+\>>

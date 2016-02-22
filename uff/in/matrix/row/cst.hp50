@@ -1,0 +1,9 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "<--" ROW\->  }
+  { "-->" \->ROW  }
+  { "+"   ROW+    }
+  { "-"   ROW-    }
+  { "SWAP"  RSWP  }
+}
+

@@ -1,0 +1,16 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Greatest Common Divisor. Two versions
+@ GCDa
+\<<
+  WHILE
+    OVER MOD DUP
+  REPEAT
+    SWAP
+  END
+  DROP
+\>>

@@ -1,0 +1,19 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+@ Randomize a List
+
+@ RANL
+\<<
+  LIST\->
+  \-> t
+  \<<
+    1 t
+    FOR n
+      n RAND * CEIL ROLLD
+    NEXT
+    t \->LIST
+  \>>
+\>>

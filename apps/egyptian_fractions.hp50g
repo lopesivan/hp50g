@@ -1,0 +1,18 @@
+%%HP: T(0)A(D)F(.);
+@ egyptian_fractions.hp50g - Egyptian Fractions
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+
+\<<
+  0 SWAP
+  WHILE DUP FXND NIP 1 >
+  REPEAT DUP INV FXND IDIV2 DUP
+     IF 0 \=!
+     THEN SIGN
+     END
+     + INV ROT OVER + UNROT - EVAL
+  END DROP
+\>>
+

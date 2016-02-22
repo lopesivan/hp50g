@@ -1,0 +1,12 @@
+%%HP: T(0)A(D)F(.);
+@ apps/lrand.hp50g - Lrand
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+@ Make a test list 1 to N
+
+@ MLN
+\<<
+  1 SWAP FOR n n NEXT DUP \->LIST
+\>>

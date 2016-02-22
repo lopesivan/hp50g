@@ -1,0 +1,45 @@
+%%HP: T(0)A(D)F(.);
+@ applications.hp50g - Applications
+@ Author: Ivan Lopes
+@ E-mail: ivan (at) 42algoritmos (dot) com (dot) br
+@ Version:
+
+\<<
+  -90 SF
+  "Grob files"
+  {
+    {"circuit_rc"  \<< :3: "GRB/cirrc.grb"        \>> }
+    {"lcircuit_rc" \<< :3: "GRB/lcirrc.grb"       \>> }
+    {"alg booleana" \<< :3: "GRB/abool.grb"        \>> }
+
+    {"derivada a^nx"         \<< :3: "GRB/d_anx.grb"        \>> }
+    {"integral a^nx"         \<< :3: "GRB/i_anx.grb"        \>> }
+    {"derivada log x^n b"    \<< :3: "GRB/d_logxnbaseb.grb" \>> }
+    {"integral log x^n b"    \<< :3: "GRB/i_logxnbaseb.grb" \>> }
+    {"derivada ln a^nx"      \<< :3: "GRB/d_lnxn.grb"       \>> }
+    {"integral ln a^nx"      \<< :3: "GRB/i_lnxn.grb"       \>> }
+    {"integral sin^n"        \<< :3: "GRB/i_senn.grb"       \>> }
+    {"integral cos^n"        \<< :3: "GRB/i_cosn.grb"       \>> }
+
+    {"laplace"               \<< :3: "GRB/laplace.grb"                  \>> }
+    {"L impulso unitario"  \<< :3: "GRB/liu.grb" \>>}
+    {"L degrau unitario"  \<< :3: "GRB/ldu.grb" \>>}
+    {"L rampa unitaria"  \<< :3: "GRB/lru.grb" \>>}
+    {"L semi parabolico"  \<< :3: "GRB/lsp.grb" \>>}
+    {"caso especial"  \<< :3: "GRB/lf1.grb" \>>}
+    {"L sin(wt)"  \<< :3: "GRB/lsinwt.grb" \>>}
+    {"L cos(wt)"  \<< :3: "GRB/lcoswt.grb" \>>}
+
+  }
+  1
+  CHOOSE
+  IF
+  THEN
+    EVAL
+  END
+
+  EVAL
+  23 KEYEVAL
+  12 KEYEVAL
+\>>
+
