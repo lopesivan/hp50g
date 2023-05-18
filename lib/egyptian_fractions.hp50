@@ -1,4 +1,3 @@
-\->egyptfrac
 \<<
   0 SWAP
   WHILE DUP FXND NIP 1 >
@@ -9,4 +8,5 @@
      + INV ROT OVER + UNROT - EVAL
   END DROP
 \>>
-
+\->egyptfrac
+STO

@@ -1,0 +1,8 @@
+%%HP: T(0)A(D)F(.);
+«
+ -105 setf
+ -3 setf
+ -17 usetf
+»
+toFloat
+STO

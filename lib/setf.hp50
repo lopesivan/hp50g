@@ -1,4 +1,3 @@
-setf
 \<< \-> x
   \<<
     IF x FC?C
@@ -6,3 +5,5 @@ setf
     END
   \>>
 \>>
+setf
+STO

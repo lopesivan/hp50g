@@ -1,4 +1,3 @@
-showformula
 \<< \-> message
   \<<
     PUSH -70 SF
@@ -16,3 +15,5 @@ showformula
   \>>
   EQ
 \>>
+showformula
+STO

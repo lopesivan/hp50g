@@ -15,10 +15,11 @@
 @      2x1
 @
 @
-inMatSol
 \<<
   2 \->LIST \->ARRY B STO
   2 \->LIST \->ARRY A STO
   A INV B *
   {A B} PURGE
 \>>
+inMatSol
+STO

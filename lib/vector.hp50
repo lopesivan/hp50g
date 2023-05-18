@@ -7,28 +7,33 @@
 @   vector*
 @   vector.
 @
-vectorDivide
 \<<
   AXL SWAP AXL SWAP / AXL
 \>>
+vectorDivide
+STO
 
-vectorExp
 \<<
   AXL SWAP AXL SWAP ^ AXL
 \>>
+vectorExp
+STO
 
-vectorMultiply
 \<<
   HADAMARD
 \>>
+vectorMultiply
+STO
 
-vector\GS
 \<<
   AXL \GSLIST EVAL
 \>>
+vector\GS
+STO
 
-vector.
 \<<
   SWAP TRAN * TRACE EVAL
 \>>
+vector.
+STO
 

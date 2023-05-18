@@ -1,7 +1,5 @@
-conf
 \<<
   HOME main
-
   -3.  usetf
   -22. setf
   -27. setf
@@ -28,3 +26,5 @@ conf
   -120. setf
   -128. setf
 \>>
+conf
+STO

@@ -6,7 +6,8 @@
 @    [-2 12 -4]]
 @    2
 @
-inMatrref
 \<<
     DUP 1 + 2 \->LIST \->ARRY '\GSDAT' STO \GSDAT RREF
 \>>
+inMatrref
+STO

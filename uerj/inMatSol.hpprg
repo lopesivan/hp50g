@@ -1,0 +1,9 @@
+%%HP: T(0)A(D)F(.);
+«
+ 2 LIST ARRY B STO
+ 2 LIST ARRY A STO
+ A INV B *
+ {A B} PURGE
+»
+inMatSol
+STO

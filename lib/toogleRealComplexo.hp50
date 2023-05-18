@@ -1,7 +1,8 @@
-R\<-\->C
 \<<
   IF -103. FS?
   THEN -103. usetf
   ELSE -103. setf
   END
 \>>
+R\<-\->C
+STO

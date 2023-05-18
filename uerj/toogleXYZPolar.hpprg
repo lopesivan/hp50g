@@ -1,0 +1,11 @@
+%%HP: T(0)A(D)F(.);
+« -15 CF -16 FS?  X
+ «
+   IF 'X'
+   THEN RECT
+   ELSE CYLIN
+   END
+ »
+»
+XYŽP
+STO

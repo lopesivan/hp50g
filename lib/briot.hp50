@@ -3,7 +3,6 @@
 @ 3
 @ briot\->
 
-briot\->
 \<<
   \-> P, X0, degree
   \<<
@@ -21,9 +20,10 @@ briot\->
     {cofs} PURGE
   \>>
 \>>
+briot\->
+STO
 
 
-\->briot
 \<<
   DUP2
   \-> P, X0
@@ -53,3 +53,6 @@ briot\->
     \GSDAT
   \>>
 \>>
+\->briot
+STO
+

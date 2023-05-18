@@ -2,24 +2,28 @@
 @ entrada é o numero de linhas da matriz
 @ exemplo de entrada: 7 -2 -3 -2 12 -4 2
 @
-\->matrix
 \<<
     2 \->LIST \->ARRY
 \>>
+\->matrix
+STO
 
-matrix\->
 \<<
     OBJ\-> OBJ\-> DROP
 \>>
+matrix\->
+STO
 
 @
 @ redimensiona uma matriz
 @ uso: ARRAY X Y \->rdmmatrix
 @
-\->rdmmatrix
 \<<
     2 \->LIST RDM
 \>>
+\->rdmmatrix
+STO
+
 
 @
 @ gera matriz com diagonal selecionada no array
@@ -27,36 +31,41 @@ matrix\->
 @
 @ 1 2 3 4 5 5 \->ARRY 2 2 diagmatrix\->
 @
-diagmatrix\->
 \<<
     2 \->LIST DIAG\->
 \>>
+diagmatrix\->
+STO
 
 @
 @ X Y Z 3 \->LIST VANDERMONDE
 @
-\->vander
 \<<
     \->LIST VANDERMONDE
 \>>
+\->vander
+STO
 
 @ matriz randomica
-\->rndmatrix
 \<<
     2 \->LIST RANM
 \>>
+\->rndmatrix
+STO
+
 
 @
 @ extrai uma matriz,como se fosse um corte retangular
 @ uso: A X0 Y0 X Y \->submatrix
 @
-\->submatrix
 \<<
   2 \->LIST UNROT
   2 \->LIST
   SWAP
   SUB
 \>>
+\->submatrix
+STO
 
 @
 @ ediciona um corte retangular em uma matriz
@@ -64,33 +73,44 @@ diagmatrix\->
 @
 @ A B 2 2 \->replacematrix
 @
-\->replacematrix
 \<<
   2 \->LIST SWAP REPL
 \>>
+\->replacematrix
+STO
 
-\->get
 \<<
     2 \->LIST GET
 \>>
+\->get
+STO
 
-\->conmatrix
+
 \<<
     UNROT 2 \->LIST SWAP CON
 \>>
-\->put
+\->conmatrix
+STO
+
 \<<
     UNROT 2 \->LIST SWAP PUT
 \>>
-\->geti
+\->put
+STO
+
 \<<
     2 \->LIST GETI
 \>>
+\->geti
+STO
 
-\->puti
+
 \<<
     UNROT 2 \->LIST SWAP PUTI
 \>>
+\->puti
+STO
+
 
 @
 @ junta listar em colunas
@@ -102,7 +122,6 @@ diagmatrix\->
 @   10 11 12 3 \->LIST
 @   4 \->jlcmatrix
 @
-\->jLcmatrix
 \<< DUP
   \-> n
   \<<
@@ -125,6 +144,9 @@ diagmatrix\->
     n COL\->
   \>>
 \>>
+\->jLcmatrix
+STO
+
 
 @
 @ junta listar em linhas
@@ -136,7 +158,6 @@ diagmatrix\->
 @   10 11 12 3 \->LIST
 @   4 \->jlrmatrix
 @
-\->jLrmatrix
 \<< DUP
   \-> n
   \<<
@@ -159,3 +180,6 @@ diagmatrix\->
     n ROW\->
   \>>
 \>>
+\->jLrmatrix
+STO
+

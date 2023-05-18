@@ -1,0 +1,8 @@
+%%HP: T(0)A(D)F(.);
+«
+ -105 usetf
+ -3 usetf
+ -17 setf
+»
+toInteger
+STO

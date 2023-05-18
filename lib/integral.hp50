@@ -1,4 +1,3 @@
-\->nInt
 \<< "usage: {Xi Xf}, f, {X Y Z}" \-> u
   \<<
     \-> ab, f, dx
@@ -29,8 +28,9 @@
     \>>
   \>>
 \>>
+\->nInt
+STO
 
-\->IInt
 \<<
   1 4
   START
@@ -42,8 +42,9 @@
   ROT SWAP
   \->nInt
 \>>
+\->IInt
+STO
 
-\->IIInt
 \<<
   1 6
   START
@@ -54,6 +55,8 @@
   3 \->LIST
   \->nInt
 \>>
+\->IIInt
+STO
 
 @ @ ab
 @ Yf Xf Zf

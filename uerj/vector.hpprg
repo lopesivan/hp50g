@@ -1,0 +1,26 @@
+%%HP: T(0)A(D)F(.);
+«
+ AXL SWAP AXL SWAP / AXL
+»
+vectorDivide
+STO
+«
+ AXL SWAP AXL SWAP ^ AXL
+»
+vectorExp
+STO
+«
+ HADAMARD
+»
+vectorMultiply
+STO
+«
+ AXL Â…LIST EVAL
+»
+vectorÂ…
+STO
+«
+ SWAP TRAN * TRACE EVAL
+»
+vector.
+STO

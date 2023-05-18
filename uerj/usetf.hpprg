@@ -1,0 +1,11 @@
+%%HP: T(0)A(D)F(.);
+´ ç x
+   ´
+     IF x FC?
+     THEN 0.
+     ELSE x CF
+     END
+   ª
+ª
+usetf
+STO
