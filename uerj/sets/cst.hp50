@@ -1,0 +1,24 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  {"XYZ\<)\<)" coord}
+  XY\<-\->P
+  D\<-\->R
+  R\<-\->C
+  {">" \<< 33 KEYEVAL \>>}
+  { "ca2c" :3: "APPS/car2cil.hp" EVAL  }
+  { "ca2e" :3: "APPS/car2es.hp" EVAL  }
+  { "c2e" :3: "APPS/cil2es.hp" EVAL  }
+  { "T1" \<<
+    \Gh COS \Gh SIN 0
+    \Gh SIN NEG \Gh COS 0
+    0 0 1 3 3 \->matrix
+  \>> }
+  { "T2" \<<
+     \Gh SIN 0 \Gh COS
+     \Gh COS 0 \Gh SIN NEG
+     0 1 0 3 3 \->matrix
+  \>> }
+
+  {"[Set]" \<< 33 KEYEVAL \>>}
+
+}
