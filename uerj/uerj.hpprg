@@ -1,0 +1,1452 @@
+%%HP: T(0)A(D)F(.);
+« HOME 'main' PGDIR CLEAR
+DIR
+func
+«
+X PEVAL EXPAND
+»
+briot
+«
+  P, X0, degree
+ «
+   {} 'cofs' STO
+   P func
+   X0
+   1 degree
+   FOR I  
+     HORNER
+     cofs
+     +
+     'cofs' STO
+   NEXT    
+   {1} cofs +
+   {cofs} PURGE
+ »
+»
+briot
+«
+ DUP2
+  P, X0
+ «
+   1 P AXL SIZE 1 -
+   FOR I
+     P
+     X0
+     I
+     briot
+     ROT
+     func AXL
+     1 I
+     START
+       0
+     NEXT
+     I LIST
+     +
+     SWAP DROP
+     SWAP DROP
+   NEXT
+   P AXL SIZE 1 - jLrmatrix
+   STO„
+   "Briot-Ruffini"
+   „DAT
+ »
+»
+CPOL
+«  M TETHA
+ « CYLIN DEG 'M*COS(TETHA)+M*SIN(TETHA)*i' EVAL
+ »
+»
+CXYZ
+«  a b
+ « DEG RECT 'a+b*i' EVAL
+ »
+»
+CCIS
+«  a
+ « a ‡ 180. / * i * EXP SINCOS
+ »
+»
+conf
+« 
+HOME main
+-3. usetf
+-22. setf
+-27. setf
+-34. setf
+-55. setf
+-56. setf
+-68. setf
+-72. setf
+-73. setf
+-74. setf
+-74. usetf
+-80. setf
+-81. setf
+-82. setf
+-90. setf
+-95. usetf
+-97. setf
+-98. setf
+-105. usetf
+-111. setf
+-116. setf
+-117. setf
+-119. setf
+-120. setf
+-128. setf
+»
+coord
+« 
+44.2 KEYEVAL 
+11.1 KEYEVAL 
+33. KEYEVAL
+»
+derivadafx
+« 
+X ˆ
+»
+egyptfrac
+«
+ 0 SWAP
+ WHILE DUP FXND NIP 1 >
+ REPEAT DUP INV FXND IDIV2 DUP
+    IF 0 ‹!
+    THEN SIGN
+    END
+    + INV ROT OVER + UNROT - EVAL
+ END DROP
+»
+func
+« { } SWAP
+ DO RCLVX DIV2 ROT + SWAP
+ UNTIL { 0. 0. } OVER POS
+ END DROP AXL
+»
+inMatrref
+« 
+DUP 1. + 2. LIST ARRY '„DAT' STO „DAT RREF
+»
+inMatSol
+«
+ 2 LIST ARRY B STO
+ 2 LIST ARRY A STO
+ A INV B *
+ {A B} PURGE
+»
+integralfx
+« 0. X 3. ROLL X „
+»
+nInt
+« "usage: {Xi Xf}, f, {X Y Z}"  u
+ «  ab f dx
+	«
+  IF dx SIZE 2. * ab SIZE =
+  THEN u DOERR
+  END ab AXL 2. ab SIZE 2. / rdmmatrix f 1. dx SIZE 1. -
+  FOR I SWAP dx SIZE I - 1. + COL- AXL OBJ DROP SWAP 4. ROLL dx I GET
+„
+  NEXT SWAP OBJ DROP SWAP ROT dx dx SIZE GET „
+	»
+ »
+»
+IInt
+« 1. 4.
+ START 7. ROLL
+ NEXT 4. LIST UNROT 2. LIST ROT SWAP nInt
+»
+IIInt
+« 1. 6.
+ START 10. ROLL
+ NEXT 6. LIST 5. ROLLD 3. LIST nInt
+»
+cm
+« 1. 4.
+ START 7. ROLL
+ NEXT 4. LIST UNROT 2. LIST ROT SWAP 3. DUPN 3. DUPN SWAP X * SWAP nInt
+4. ROLLD nInt DUP UNROT / EVAL 5. ROLLD 4. ROLLD SWAP Y * SWAP nInt SWAP DUP
+4. ROLLD / EVAL
+»
+IVAN
+« PUSH -70. SF "IVAN LOPES" 0. GROB "CPF  :083.492.327-06" 0.
+GROB GROBADD "ID   :11.642.424-3" 0. GROB GROBADD "UFF ID:212.038104" 0.
+GROB GROBADD "TE   :943889703/02" 0. GROB GROBADD "TEL   :965890739" 0.
+GROB GROBADD " zona:003" 0. GROB GROBADD " secao:0219" 0. GROB GROBADD
+SCROLL POP
+»
+LoadCST
+« 22.2 KEYEVAL
+»
+matrix
+« 2. LIST ARRY
+»
+matrix
+« OBJ OBJ DROP
+»
+rdmmatrix
+« 2. LIST RDM
+»
+diagmatrix
+« 2. LIST DIAG
+»
+vander
+« LIST VANDERMONDE
+»
+rndmatrix
+« 2. LIST RANM
+»
+submatrix
+« 2. LIST UNROT 2. LIST SWAP SUB
+»
+replacematrix
+« 2. LIST SWAP REPL
+»
+get
+« 2. LIST GET
+»
+conmatrix
+« UNROT 2. LIST SWAP CON
+»
+put
+« UNROT 2. LIST SWAP PUT
+»
+geti
+« 2. LIST GETI
+»
+puti
+« UNROT 2. LIST SWAP PUTI
+»
+jLcmatrix
+« DUP  n
+ « 1. SWAP
+	FOR J OBJ ARRY
+  IF J n <
+  THEN J 1. + ROLL
+  END
+	NEXT
+	IF n 1. >
+	THEN 1. n 1. -
+  FOR J J 1. + ROLL
+  NEXT
+	END n COL
+ »
+»
+jLrmatrix
+« DUP  n
+ « 1. SWAP
+	FOR J OBJ ARRY
+  IF J n <
+  THEN J 1. + ROLL
+  END
+	NEXT
+	IF n 1. >
+	THEN 1. n 1. -
+  FOR J J 1. + ROLL
+  NEXT
+	END n ROW
+ »
+»
+SC
+«  a b
+ « 'a*COS(b)+a*SIN(b)*i' EVAL
+ »
+»
+setf
+«  x
+ «
+	IF x FC?C
+	THEN x SF
+	END
+ »
+»
+showformula
+«  message
+ « PUSH -70. SF "Show Formula" "Show Formula" 0. GROB
+message 0. GROB GROBADD "" 0. GROB GROBADD EQ 0. GROB GROBADD SCROLL POP
+ » EQ
+»
+SN
+« "'" SWAP + OBJ
+»
+NS
+« STR DUP
+ IF "'" POS 1. ==
+ THEN DUP SIZE 1. - 2. SWAP SUB
+ END
+»
+toFloat
+« -105. setf -3. setf -17. usetf
+»
+toInteger
+« -105. usetf -3. usetf -17. setf
+»
+DŽR
+« -18. CF -17. FS?  X
+ «
+	IF 'X'
+	THEN DEG
+	ELSE RAD
+	END
+ »
+»
+RŽC
+«
+ IF -103. FS?
+ THEN -103. usetf
+ ELSE -103. setf
+ END
+»
+XYŽP
+« -15. CF -16. FS?  X
+ «
+	IF 'X'
+	THEN RECT
+	ELSE CYLIN
+	END
+ »
+»
+usetf
+«  x
+ «
+	IF x FC?
+	THEN 0.
+	ELSE x CF
+	END
+ »
+»
+vectorDivide
+« AXL SWAP AXL SWAP / AXL
+»
+vectorExp
+« AXL SWAP AXL SWAP ^ AXL
+»
+vectorMultiply
+« HADAMARD
+»
+vector„
+« AXL „LIST EVAL
+»
+vector.
+« SWAP TRAN * TRACE EVAL
+»
+Xn
+«  str N
+ « 1. N
+	FOR I str I + OBJ
+	NEXT
+ »
+»
+CST {
+ {"SET" sets}
+ {"i" in}
+ {"o" op}
+ {"sol"  solutions}
+ {"poly" poly     }
+ {">" « 33 KEYEVAL »}
+ {"<" « 33.2 KEYEVAL »}
+ { "calc" calc     }
+ { "cir"  circuits }
+ {">" « 33 KEYEVAL »}
+ {"[uerj]<" « 33 KEYEVAL »}
+}
+solutions
+DIR
+ CST {
+   {  « UPDIR LoadCST » }
+   solve
+   zeros
+   factor
+   trig
+   {">" « 33 KEYEVAL »     }
+   {"slin" ls                  }
+   { " = " toInteger           }
+   { "Eq234"  « :3: "PROGRAMS/EQWRAP" EVAL » }
+   { "hypot"  « :3: "PROGRAMS/HYPOTWRAP" EVAL » }
+   { "cathe"  « :3: "PROGRAMS/CATHETUSWRAP" EVAL » }
+   {">" « 33 KEYEVAL »     }
+   { fact FACTOR               }
+   { facts FACTORS             }
+   { "<-+->" EXPAND            }
+   {"+ mod" EXPANDMOD          }
+   {"- mod" FACTORMOD          }
+   {"<" « 33 KEYEVAL »     }
+ }
+ factor
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { f FACTOR }
+     { s FACTORS }
+     { expand EXPAND }
+     { " 1/ " PROPFRAC }
+     { " = " « -105 usetf -3 usetf -17 setf » }
+     RI
+     IR
+     {"1/x..." « :3: "APPS/egyptian_fractions.hp" EVAL» }
+   }
+ END
+ ls
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { MSol inMatSol  }
+     { MSol inMatrref }
+     { 2
+     «
+       { 2 } ARRY 's1' STO
+       s1 X Y { 2 } ARRY LINSOLVE
+     »
+     }
+     { 3
+     «
+       { 3 } ARRY 's1' STO
+       s1 Y Z { 3 } ARRY LINSOLVE
+     »
+     }
+     { 4
+     « { 4 } ARRY 's1' STO
+       s1 X Y Z W { 4 } ARRY LINSOLVE
+     »
+     }
+     { n
+     « ARRY LINSOLVE »
+     }
+   }
+   s1 [ 0. '7*X-2*Y=Y+10' '-X=2*X-5*Y' ]
+ END
+ solve
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"   « ARRY  » }
+     { "p(x)" func }
+     { "(x)p" func }
+     XQ
+     {">" « 33 KEYEVAL »}
+     { x « SOLVEVX » }
+     { y « 'Y' SOLVE » }
+     { z « 'Z' SOLVE » }
+     { "AB" « 2 LIST | » }
+     { "fB-fA" PREVAL }
+     {"<" « 33 KEYEVAL »}
+   }
+   px
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { " = " « -105. usetf -3. usetf -17. setf » }
+       { input ARRY }
+       { "p(x)" func }
+       { "(x)p" func }
+       XQ
+     }
+   END
+ END
+ trig
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     TCOLLECT
+     TEXPAND
+     TLIN
+     TSIMP
+     {">" « 33 KEYEVAL »}
+     { "<" « 33.2 KEYEVAL »}
+     TRIG
+     TRIGSIN
+     TRIGCOS
+     TRIGTAN
+     {">" « 33 KEYEVAL »}
+     { "<" « 33.2 KEYEVAL »}
+     EXP
+     EXPL
+     ""
+     ""
+     {">" « 33 KEYEVAL »}
+     { "<" « 33.2 KEYEVAL »}
+     TCHEBYCHEFF
+     ""
+     ""
+     ""
+     {">" « 33 KEYEVAL »}
+   }
+ END
+ zeros
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"   « ARRY  » }
+     { "p(x)" func }
+     { "(x)p" func }
+     XQ
+     {">" « 33 KEYEVAL »}
+     { x « SOLVEVX » }
+     { y « 'Y' SOLVE » }
+     { z « 'Z' SOLVE » }
+     { "SUBST" « « X SWAP = » EVAL SUBST » }
+     RŽC
+     {"<" « 33 KEYEVAL »}
+   }
+ END
+END
+circuits
+DIR
+ BRIDGE
+ «
+   R1 R4 * R2 R3 * =
+ »
+ CST {
+   {  « UPDIR LoadCST » }
+   { + plus                    }
+   sets
+   { "÷I" :3: "APPS/divisor_corrente.hp" EVAL  }
+   { "r//"  :3: "APPS/resistencia_paralelo.hp" EVAL }
+   {">" « 33 KEYEVAL »     }
+   { "A.X=B" inMatSol         }
+   { MSol    inMatrref        }
+   {"TYPE"   typing           }
+   { "fasor" :3: "APPS/2fasor.hp" EVAL  }
+   { "rms" « 2 ƒ / NUM »  }
+   {">" « 33 KEYEVAL »    }
+   AXL
+   DET
+   TRAN
+   INV
+   { expand EXPAND            }
+   {"<" « 33 KEYEVAL »}
+ }
+ plus
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     complex
+     { "GROB" « :3: "APPS/circuit.hp" EVAL » }
+     { "›\173Y" «  :3: "APPS/estrela_delta.hp" EVAL» }
+     { "Y\173›" «  :3: "APPS/delta_estrela.hp" EVAL » }
+     „DAT
+   }
+   complex
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { " = " toInteger }
+       { " ~ " toFloat   }
+       typing
+       { "a b"
+       «  a, b
+         «
+           DEG RECT '(a, b)' EVAL
+         »
+       »
+       }
+     {">" « 33 KEYEVAL »}
+       { "M€•" «  M, TETHA « CYLIN DEG '(M, € TETHA)' EVAL » » }
+       { "fasor" :3: "APPS/2fasor.hp" EVAL  }
+       { "rms" « 2 ƒ / NUM »  }
+       XYŽP
+       DŽR
+       {">" « 33 KEYEVAL »}
+       { "\133 F" :3: "APPS/sfasor.hp" EVAL  }
+       { "V_R" :3: "APPS/vr.hp" EVAL  }
+       { "V_L" :3: "APPS/vl.hp" EVAL  }
+       { "V_C" :3: "APPS/vc.hp" EVAL  }
+       { "Z//" « :3: "APPS/resistencia_paralelo.hp" EVAL »}
+       {">" « 33 KEYEVAL »}
+       { "X_L" :3: "APPS/xl.hp" EVAL  }
+       { "X_C" :3: "APPS/xc.hp" EVAL  }
+       { "R" :3: "APPS/r.hp" EVAL  }
+       { "L" :3: "APPS/l.hp" EVAL  }
+       { "C" :3: "APPS/c.hp" EVAL  }
+       {">" « 33 KEYEVAL »}
+       { "cplx1" :3: "APPS/fcplx1.hp" EVAL  }
+       { "cplx2" :3: "APPS/fcplx.hp" EVAL  }
+       ""
+       ""
+       ""
+       {">" « 33 KEYEVAL »}
+     }
+     typing
+     DIR
+       Zn
+       «  N
+           « "Z" N Xn »
+       »
+       Cn
+       «  N
+           « "C" N Xn »
+       »
+       In
+       «  N
+           « "I" N Xn »
+       »
+       Ln
+       «  N
+           « "L" N Xn »
+       »
+       Rn
+       «  N
+           « "R" N Xn »
+       »
+       Vn
+       «  N
+           « "V" N Xn »
+       »
+       CST {
+         {  « UPDIR LoadCST » }
+         { "<--"    matrix }
+         { "-->"    matrix }
+         { "<--"   « ARRY  » }
+         { "-->"   « OBJ   » }
+         {">" « 33 KEYEVAL »    }
+         i
+         XC
+         XL
+         Zn
+         Rn
+         {">" « 33 KEYEVAL »    }
+         In
+         Vn
+         Cn
+         Ln
+         ""
+         {"<" « 33 KEYEVAL »}
+       }
+     END
+   END
+ END
+ typing
+ DIR
+   Cn
+   «  N
+       « "C" N Xn »
+   »
+   In
+   «  N
+       « "I" N Xn »
+   »
+   Ln
+   «  N
+       « "L" N Xn »
+   »
+   Rn
+   «  N
+       « "R" N Xn »
+   »
+   Vn
+   «  N
+       « "V" N Xn »
+   »
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"    matrix }
+     { "-->"    matrix }
+     { "<--"   « ARRY  » }
+     { "-->"   « OBJ   » }
+     {">" « 33 KEYEVAL »    }
+     Rn
+     In
+     Vn
+     Cn
+     Ln
+     {"<" « 33 KEYEVAL »}
+   }
+ END
+END
+in
+DIR
+ CST {
+   {  « UPDIR LoadCST » }
+   { + input   }
+   { C complex }
+   { L list    }
+   { A array   }
+   { M matrix  }
+ }
+ array
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"   « ARRY  » }
+     { "-->"   « OBJ   » }
+     AXL
+     { FUN « 44.2 KEYEVAL 13.1 KEYEVAL » }
+     { ">" « 33 KEYEVAL »}
+     { "÷"   vectorDivide }
+     { "*"     vectorMultiply   }
+     { "^"     vectorExp   }
+     { "„"   vector„ }
+     { "DOT"   « vectorMultiply vector„ » }
+     { ">" « 33 KEYEVAL »}
+     { "\043" jLrmatrix }
+     { "-"    ROW   }
+     { "\043" jLcmatrix }
+     { "-"    COL  }
+     ""
+     { "<" « 33 KEYEVAL »}
+   }
+ END
+ complex
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { " = " toInteger }
+     { " ~ " toFloat   }
+     { "M€•"
+     «  M, TETHA
+       «
+         CYLIN DEG '(M, € TETHA)' EVAL
+       »
+     »
+     }
+     { "a b"
+     «  a, b
+       «
+         DEG RECT '(a, b)' EVAL
+       »
+     »
+     }
+     {">" « 33 KEYEVAL »}
+     { FUN « 44.2 KEYEVAL 33.2 KEYEVAL 13.1 KEYEVAL » }
+     { "M€•"
+     «  M, TETHA
+       «
+         '(M, € TETHA)' EVAL
+       »
+     »
+     }
+     { "a b"
+     «  a, b
+       «
+         '(a, b)' EVAL
+       »
+     »
+     }
+     { "cis•" « i X * EXP SINCOS » }
+     ""
+     { ">" « 33 KEYEVAL »}
+     XYŽP
+     DŽR
+     RC
+     CR
+     RŽC
+     {">" « 33 KEYEVAL »}
+     { fact FACTOR               }
+     { facts FACTORS             }
+     { pfrac PARTFRAC            }
+     { expand EXPAND             }
+     ""
+     {"<" « 33 KEYEVAL »}
+   }
+ END
+ input
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { " = " toInteger }
+     { "TYPE"
+     «
+       42.2 KEYEVAL
+       15.1 KEYEVAL
+     »
+     }
+     { "p(x)" func }
+     { "(x)p" func }
+     XQ
+   }
+ END
+ list
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"   « LIST  » }
+     { "-->"   « OBJ   » }
+     AXL
+     { FUN « 44.2 KEYEVAL 13.1 KEYEVAL » }
+     { ">" « 33 KEYEVAL »}
+     {"uniq" « :3: "APPS/uniq.hp" EVAL » }
+     SEQ
+     MAP
+     TABVAL
+     ""
+     { ">" « 33 KEYEVAL »}
+     ""
+     ""
+     { "p(x)" func }
+     { "(x)p" func }
+     XQ
+     { "<" « 33 KEYEVAL »}
+   }
+ END
+ matrix
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"    matrix }
+     { "-->"    matrix }
+     row
+     col
+     { FUN « 44.2 KEYEVAL 12.1 KEYEVAL » }
+   }
+   col
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       {"<--" COL  }
+       {"-->" COL  }
+       {"+"   COL+    }
+       {"-"   COL-    }
+       {"SWAP"  CSWP  }
+     }
+   END
+   row
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { "<--" ROW  }
+       { "-->" ROW  }
+       { "+"   ROW+    }
+       { "-"   ROW-    }
+       { "SWAP"  RSWP  }
+     }
+   END
+ END
+END
+op
+DIR
+ CST {
+   {  « UPDIR LoadCST » }
+   { " = " toInteger           }
+   { " ~ " toFloat             }
+   {"SN" « "'" SWAP + OBJ »}
+   {"NS" «
+   STR DUP
+   IF "'" POS 1 ==
+   THEN DUP SIZE 1 - 2 SWAP SUB
+   END
+   »}
+   {">" « 33 KEYEVAL »     }
+   { M matrix                  }
+   {"Q" q                      }
+   { "tools" tools             }
+   {"2A" «
+     STR SWAP STR
+     :3: "PROGRAMS/FMT2A" EVAL
+   » }
+   {"3A" «
+     STR SWAP STR ROT STR
+     :3: "PROGRAMS/FMT3A" EVAL
+   » }
+   {">" « 33 KEYEVAL »     }
+   { fact FACTOR               }
+   { facts FACTORS             }
+   { "<-+->" EXPAND            }
+   {"+ mod" EXPANDMOD          }
+   {"- mod" FACTORMOD          }
+   {">" « 33 KEYEVAL »     }
+   { fact FACTOR               }
+   { facts FACTORS             }
+   { pfrac PARTFRAC            }
+   { expand EXPAND             }
+   { AXL                       }
+   {"<" « 33 KEYEVAL »     }
+ }
+ matrix
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--"    matrix }
+     { "-->"    matrix }
+     row
+     col
+     {">" « 33 KEYEVAL »}
+     {"1xN" line }
+     { FUN « 44.2 KEYEVAL 12.1 KEYEVAL » }
+     SYST2MAT
+      ""
+      ""
+     {">" « 33 KEYEVAL »}
+     {"GET"  get  }
+     {"PUT"  put  }
+     {"GETI" geti }
+     {"PUTI" puti }
+     ""
+     {">" « 33 KEYEVAL »}
+     GET
+     PUT
+     GETI
+     PUTI
+     UNROT
+     {">" « 33 KEYEVAL »}
+     {"RAND" rndmatrix}
+     {"CONST"  conmatrix}
+     {"VANDER"   vander}
+     SIZE
+     ""
+     {">" « 33 KEYEVAL »}
+     {"REDIMENCIONA" rdmmatrix}
+     {"DIAG"     diagmatrix}
+     DIAG
+     ""
+     ""
+     {">" « 33 KEYEVAL »}
+     { "SUB"     submatrix     }
+     { "REPLACE" replacematrix }
+     { "RCIJ"    RCIJ             }
+     ""
+     {"HELP" « :3: "HELP/rcij.hp" EVAL »}
+     {"<" « 33 KEYEVAL »}
+   }
+   col
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       {"<--" COL  }
+       {"-->" COL  }
+       {"+"   COL+    }
+       {"-"   COL-    }
+       {"SWAP"  CSWP  }
+     }
+   END
+   line
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { "<--"   « ARRY  » }
+       { "-->"   « OBJ   » }
+       ""
+       ""
+       {">" « 33 KEYEVAL »}
+       {"\043" jLrmatrix }
+       {"-"    ROW   }
+       {"\043" jLcmatrix }
+       {"-"    COL  }
+       ""
+       {">" « 33 KEYEVAL »}
+       {"÷"   vectorDivide }
+       {"*"     vectorMultiply   }
+       {"^"     vectorExp   }
+       {"„"   vector„ }
+       {"DOT"   « vectorMultiply vector„ » }
+       {"<" « 33 KEYEVAL »}
+     }
+   END
+   row
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       {"<--" ROW  }
+       {"-->" ROW  }
+       {"+"   ROW+    }
+       {"-"   ROW-    }
+       {"SWAP"  RSWP  }
+     }
+   END
+ END
+ q
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     Q
+     XQ
+     Q‡
+     Q
+     NUM
+   }
+ END
+ setting
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     {"XYZ€€" coord}
+     XYŽP
+     DŽR
+     RŽC
+     varON
+     {">" « 33 KEYEVAL »}
+     { " = " toInteger }
+     { " ~ " toFloat   }
+     ""
+     ""
+     {">" « 33 KEYEVAL »}
+     { expand EXPAND }
+     { factor FACTOR }
+     ""
+     ""
+     ""
+     {"<" « 33 KEYEVAL »}
+   }
+ END
+ tools
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     EVAL
+     DISTRIB
+     FDISTRIB
+     COLLECT
+     {">" « 33 KEYEVAL »     }
+     EXPAND
+     FACTOR
+     COLCT
+     SIMPLIFY
+     ""
+     {">" « 33 KEYEVAL »     }
+   ACOS2S
+   ASIN2C
+   ASIN2T
+   ATAN2S
+   SINCOS
+     {">" « 33 KEYEVAL »     }
+   EXP2HYP
+   EXP2POW
+   EXPLN
+   LNCOLLECT
+   TEXPAND
+     {">" « 33 KEYEVAL »     }
+   TCOLLECT
+   TLIN
+   TRIGSIN
+   TRIGCOS
+   TRIGTAN
+     {">" « 33 KEYEVAL »     }
+   TRIG
+   TAN2CS2
+   TAN2SC
+   TAN2SC2
+   HALFTAN
+     {"<" « 33 KEYEVAL »     }
+   }
+ END
+END
+sets
+DIR
+ CST {
+   {  « UPDIR LoadCST » }
+   {"XYZ€€" coord}
+   XYŽP
+   DŽR
+   RŽC
+   {">" « 33 KEYEVAL »}
+   { "ca2c" :3: "APPS/car2cil.hp" EVAL  }
+   { "ca2e" :3: "APPS/car2es.hp" EVAL  }
+   { "c2e" :3: "APPS/cil2es.hp" EVAL  }
+   { "T1" «
+     • COS • SIN 0
+     • SIN NEG • COS 0
+     0 0 1 3 3 matrix
+   » }
+   { "T2" «
+      • SIN 0 • COS
+      • COS 0 • SIN NEG
+      0 1 0 3 3 matrix
+   » }
+   {"[Set]" « 33 KEYEVAL »}
+ }
+END
+calc
+DIR
+ CST {
+   {  « UPDIR LoadCST » }
+   { "SIMBOLIC" plus           }
+   { "ˆ" derivada            }
+   { "„" integral            }
+   { "[XYZ]" vetorial          }
+   {">" « 33 KEYEVAL »     }
+   { fact FACTOR               }
+   { facts FACTORS             }
+   { pfrac PARTFRAC            }
+   { expand EXPAND             }
+   { " = " toInteger           }
+   {">" « 33 KEYEVAL »     }
+   TCOLLECT
+   TEXPAND
+   TLIN
+   TSIMP
+   ""
+   {">" « 33 KEYEVAL »     }
+   { "GROB" « :3: "APPS/calculo.hp" EVAL » }
+   {"Icos"
+   «
+   :3: "GRB/icos_n.grb"
+   EVAL
+   23 KEYEVAL 12 KEYEVAL
+   LoadCST
+   33 KEYEVAL
+   33 KEYEVAL
+   33 KEYEVAL
+   »
+   }
+   {"Isin"
+   «
+   :3: "GRB/isin_n.grb"
+   EVAL
+   23 KEYEVAL 12 KEYEVAL
+   LoadCST
+   33 KEYEVAL
+   33 KEYEVAL
+   33 KEYEVAL
+   »
+   }
+   ""
+   ""
+   {"<" « 33 KEYEVAL »     }
+ }
+ gcosn
+ «
+   :3: "GRB/icos_n.grb" EVAL 23 KEYEVAL 12 KEYEVAL
+ »
+ gds
+ «
+   :3: "GRB/DS.GRB"
+   EVAL 23 KEYEVAL 12 KEYEVAL
+ »
+ gir
+ «
+   :3: "GRB/IR.GRB"
+   EVAL 23 KEYEVAL 12 KEYEVAL
+ »
+ derivada
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { x « DERVX » }
+     { y « 'Y' DERIV » }
+     { z « 'Z' DERIV » }
+     ""
+     {">" « 33 KEYEVAL »     }
+     { val PREVAL }
+     { "AB" « 2 LIST | » }
+     ""
+     ""
+     ""
+     {"<" « 33 KEYEVAL »     }
+   }
+ END
+ integral
+ DIR
+   CST {
+     {  « UPDIR LoadCST »         }
+     {"„" « INTVX 3 ROLLD PREVAL » }
+     {"„„" IInt                   }
+     {"„„„" IIInt               }
+     { RISCH risch                       }
+     { part ibp                          }
+     { val PREVAL }
+     { "AB" « 2 LIST | » }
+     ""
+     ""
+     ""
+     {"<" « 33 KEYEVAL »     }
+   }
+   ibp
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { x « IBP » }
+       {"X*e^X"
+       «
+         X X EXP *
+         X EXP
+       »
+       }
+       ""
+       {"HELP" « "U.dV dV IBP"»}
+       {">" « 33 KEYEVAL »}
+       { val PREVAL }
+       { "AB" « 2 LIST | » }
+       ""
+       ""
+       ""
+       {"<" « 33 KEYEVAL »     }
+     }
+   END
+   risch
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { x « 'X' RISCH » }
+       { y « 'Y' RISCH » }
+       { z « 'Z' RISCH » }
+       ""
+       {">" « 33 KEYEVAL »     }
+       { val PREVAL }
+       { "AB" « 2 LIST | » }
+       ""
+       ""
+       ""
+       {"<" « 33 KEYEVAL »     }
+     }
+   END
+ END
+ plus
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { dx
+     «
+       derivadafx
+     »
+     }
+     { Ix
+     «
+       integralfx
+     »
+     }
+     GRAD
+     DIV
+     ROT
+   }
+   PERI
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { "•"
+       «
+         3 ROLL DUP DUP * SWAP DERVX DUP * + TLIN ƒ DUP 4 ROLLD INTVX 3 ROLLD PREVAL NUM
+       »
+       }
+       { "•-0"
+       «
+         DUP DUP * SWAP DERVX DUP * + TLIN
+       »
+       }
+     }
+   END
+ END
+ vetorial
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "J" jaco }
+     { "‚" del }
+     { "dS" sur }
+     {"Vsor" « :3: "APPS/versor.hp" EVAL »    }
+     {">" « 33 KEYEVAL »}
+     { "<--" « LIST AXL » }
+     { "”" « DUP ABS / » }
+     { "M / " « AXL SWAP AXL SWAP / AXL » }
+     { "M ^ " « AXL SWAP AXL SWAP ^ AXL » }
+     { "M * " HADAMARD }
+     {">" « 33 KEYEVAL »}
+     ABS
+     { "DOT" « AXL „LIST EVAL » }
+     { "CROSS"
+     «
+       AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
+     »
+     }
+     { "V2" « 2 LIST AXL » }
+     { "V3" « 3 LIST AXL » }
+     { "DOT" « SWAP TRAN * TRACE EVAL » }
+   }
+   del
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { ‚f
+       «
+         [ 'X' 'Y' 'Z' ] HESS EXPAND
+       »
+       }
+       { ‚.F
+       «
+         3 LIST AXL
+         [ 'X' 'Y' 'Z' ] DIV EXPAND
+       »
+       }
+       { ‚×F
+       «
+         3 LIST AXL
+         [ 'X' 'Y' 'Z' ] CURL EXPAND
+       »
+       }
+        ""
+       {">" « 33 KEYEVAL »}
+       {"<" « 33.2 KEYEVAL »}
+       { "Ex‚f"
+       «
+         X 2 ^ X Y * X Z * + +
+       »
+       }
+       { "Ex‚.F"
+       «
+         X Y *
+         X 2 ^ Y 2 ^ Z 2 ^ + +
+         Y Z *
+       »
+       }
+       { "Ex‚×F"
+       «
+         X Y *
+         X 2 ^ Y 2 ^ Z 2 ^ + +
+         Y Z *
+       »
+       }
+     }
+   END
+   jaco
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { "J(2)"
+       «
+         SWAP [ 'X' 'Y' ] HESS DROP SWAP DROP EXPAND SWAP [ 'X' 'Y' ] HESS DROP SWAP DROP EXPAND AUGMENT
+       »
+       }
+       { "J(3)"
+       «
+         SWAP [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND SWAP [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND ROT [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND ROT ROT AUGMENT AUGMENT
+       »
+       }
+       MVar
+       DET
+       TCOLLECT
+     }
+     MVar
+     DIR
+       CST {
+         {  « UPDIR LoadCST » }
+         { "polar"
+         «
+           X Y COS * X Y SIN *
+         »
+         }
+         { "cilindrica"
+         «
+           X Y COS * X Y SIN * Z
+         »
+         }
+         { "esferica"
+         «
+           X Z SIN Y COS * * X Z SIN Y SIN * * X Z COS *
+         »
+         }
+       }
+     END
+   END
+   sur
+   DIR
+     CST {
+       {  « UPDIR LoadCST » }
+       { "dS"
+       «
+         3 LIST AXL DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND [ 'i' 'j' 'k' ] 3 ROLLD AUGMENT AUGMENT
+         ROW
+         DROP
+         AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
+         3 LIST AXL
+         ABS
+       »
+       }
+       { "dS"
+       «
+         3 LIST AXL DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND [ 'i' 'j' 'k' ] 3 ROLLD AUGMENT AUGMENT
+       »
+       }
+       { "dS"
+       «
+         3 LIST AXL  DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
+       »
+       }
+       MVar
+       DET
+       TCOLLECT
+       TEXPAND
+       TLIN
+       TSIMP
+       TRIG
+       TRIGSIN
+       ROT
+     }
+     MVar
+     DIR
+       CST {
+         {  « UPDIR LoadCST » }
+         { "polar"
+         «
+           A X COS * A X SIN *
+         »
+         }
+         { "cilindrica"
+         «
+           A X COS * A X SIN * Y
+         »
+         }
+         { "esferica"
+         «
+           A X SIN Y COS * * A X SIN Y SIN * * A X COS *
+         »
+         }
+       }
+     END
+   END
+ END
+END
+poly
+DIR
+ CST {
+   {  « UPDIR LoadCST »   }
+   „DAT
+   p
+   f
+   briot
+   {">" « 33 KEYEVAL »       }
+   { fact FACTOR                 }
+   { facts FACTORS               }
+   { pfrac PARTFRAC              }
+   { expand EXPAND               }
+   { " = " toInteger             }
+   {">" « 33 KEYEVAL »       }
+   { q « DUP2 QUOT »                      }
+   { r « DUP2 REMAINDER »                 }
+   {div  « DUP2 DIV2 »       }
+   {"residue" « residue » }
+   {"POLY" « 93.3 KEYEVAL 14 KEYEVAL »}
+   {">" « 33 KEYEVAL »       }
+   { "AB" « 2 LIST | » }
+   { "ik" « i SWAP 2 LIST MATCH »}
+   { "P(A)" PEVAL              }
+   { "B - A" PREVAL }
+   XQ
+   {"<" « 33 KEYEVAL »       }
+ }
+ f
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--" ARRY             }
+     { " = " toInteger           }
+     { coef
+     «
+       FCOEF EVAL
+     »
+                                 }
+     { raiz FROOTS               }
+     {">" « 33 KEYEVAL »     }
+     { "P(n)" PEVAL              }
+     { "p(x)" func            }
+     { "(x)p" func            }
+     XQ
+     AXL
+     {"<" « 33 KEYEVAL »     }
+   }
+ END
+ p
+ DIR
+   CST {
+     {  « UPDIR LoadCST » }
+     { "<--" ARRY }
+     { " = " toInteger }
+     { coef PCOEF }
+     { raiz PROOT }
+     {">" « 33 KEYEVAL »}
+     { "P(n)" PEVAL }
+     { "p(x)" func }
+     { "(x)p" func }
+     XQ
+     AXL
+     {"<" « 33 KEYEVAL »}
+   }
+ END
+END
+END 'main' STO main conf main CLEAR
+»

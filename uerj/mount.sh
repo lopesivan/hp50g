@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "%%HP: T(0)A(D)F(.);"
+
 echo "\<< HOME 'main' PGDIR CLEAR"
 echo DIR
 
