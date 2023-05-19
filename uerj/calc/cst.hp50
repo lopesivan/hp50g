@@ -1,0 +1,50 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "SIMBOLIC" plus           }
+  { "\.d" derivada            }
+  { "\.S" integral            }
+  { "[XYZ]" vetorial          }
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { fact FACTOR               }
+  { facts FACTORS             }
+  { pfrac PARTFRAC            }
+  { expand EXPAND             }
+  { " = " toInteger           }
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  TCOLLECT
+  TEXPAND
+  TLIN
+  TSIMP
+  ""
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { "GROB" \<< :3: "APPS/calculo.hp" EVAL \>> }
+  {"Icos"
+  \<<
+  :3: "GRB/icos_n.grb"
+  EVAL
+  23 KEYEVAL 12 KEYEVAL
+  LoadCST
+  33 KEYEVAL
+  33 KEYEVAL
+  33 KEYEVAL
+  \>>
+  }
+  {"Isin"
+  \<<
+  :3: "GRB/isin_n.grb"
+  EVAL
+  23 KEYEVAL 12 KEYEVAL
+  LoadCST
+  33 KEYEVAL
+  33 KEYEVAL
+  33 KEYEVAL
+  \>>
+  }
+  ""
+  ""
+  {"<" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+}

@@ -1,0 +1,14 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "\Gh"
+  \<<
+    3 ROLL DUP DUP * SWAP DERVX DUP * + TLIN \v/ DUP 4 ROLLD INTVX 3 ROLLD PREVAL \->NUM
+  \>>
+  }
+  { "\Gh-0"
+  \<<
+    DUP DUP * SWAP DERVX DUP * + TLIN
+  \>>
+  }
+}
+

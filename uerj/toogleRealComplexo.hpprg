@@ -1,9 +1,0 @@
-%%HP: T(0)A(D)F(.);
-´
- IF -103. FS?
- THEN -103. usetf
- ELSE -103. setf
- END
-ª
-RéçC
-STO

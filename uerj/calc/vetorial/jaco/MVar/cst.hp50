@@ -1,0 +1,20 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "polar"
+  \<<
+    X Y COS * X Y SIN *
+  \>>
+  }
+  { "cilindrica"
+  \<<
+    X Y COS * X Y SIN * Z
+  \>>
+  }
+  { "esferica"
+  \<<
+    X Z SIN Y COS * * X Z SIN Y SIN * * X Z COS *
+  \>>
+  }
+}
+
+

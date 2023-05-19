@@ -1,6 +1,0 @@
-%%HP: T(0)A(D)F(.);
-«
-   DUP 1 + 2 LIST ARRY 'Â…DAT' STO Â…DAT RREF
-»
-inMatrref
-STO

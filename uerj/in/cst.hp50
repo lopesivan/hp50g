@@ -1,0 +1,8 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { + input   }
+  { C complex }
+  { L list    }
+  { A array   }
+  { M matrix  }
+}

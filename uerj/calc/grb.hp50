@@ -1,0 +1,16 @@
+gcosn
+\<<
+  :3: "GRB/icos_n.grb" EVAL 23 KEYEVAL 12 KEYEVAL
+\>>
+
+gds
+\<<
+  :3: "GRB/DS.GRB"
+  EVAL 23 KEYEVAL 12 KEYEVAL
+\>>
+
+gir
+\<<
+  :3: "GRB/IR.GRB"
+  EVAL 23 KEYEVAL 12 KEYEVAL
+\>>

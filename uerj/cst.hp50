@@ -9,14 +9,6 @@ CST {
   {"<" \<< 33.2 KEYEVAL \>>}
   { "calc" calc     }
   { "cir"  circuits }
-  { "elmag"  elmag }
-  { "ctrl" controle }
   {">" \<< 33 KEYEVAL \>>}
-@ ----------------------------------------------------------------------------
-  {"<" \<< 33.2 KEYEVAL \>>}
-  { "EDO"  edo      }
-  { "stat" stat}
-  { "mec" mec     }
-  { "tools" tools     }
-  {"[uff]<" \<< 33 KEYEVAL \>>}
+  {"[uerj]<" \<< 33 KEYEVAL \>>}
 }

@@ -1,0 +1,45 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { \.Vf
+  \<<
+    [ 'X' 'Y' 'Z' ] HESS EXPAND
+  \>>
+  }
+  { \.V.F
+  \<<
+    3 \->LIST AXL
+    [ 'X' 'Y' 'Z' ] DIV EXPAND
+  \>>
+  }
+  { \.V\.xF
+  \<<
+    3 \->LIST AXL
+    [ 'X' 'Y' 'Z' ] CURL EXPAND
+  \>>
+  }
+   ""
+  {">" \<< 33 KEYEVAL \>>}
+
+  {"<" \<< 33.2 KEYEVAL \>>}
+  { "Ex\.Vf"
+  \<<
+    X 2 ^ X Y * X Z * + +
+  \>>
+  }
+  { "Ex\.V.F"
+  \<<
+    X Y *
+    X 2 ^ Y 2 ^ Z 2 ^ + +
+    Y Z *
+    @3 \->LIST AXL
+  \>>
+  }
+  { "Ex\.V\.xF"
+  \<<
+    X Y *
+    X 2 ^ Y 2 ^ Z 2 ^ + +
+    Y Z *
+    @3 \->LIST AXL
+  \>>
+  }
+}

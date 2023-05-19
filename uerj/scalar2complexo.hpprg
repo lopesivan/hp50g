@@ -1,8 +1,0 @@
-%%HP: T(0)A(D)F(.);
-«  a b
- «
-   'a*COS(b)+a*SIN(b)*i' EVAL
- »
-»
-SC
-STO

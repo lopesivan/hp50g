@@ -1,0 +1,34 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "dS"
+  \<<
+    3 \->LIST AXL DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND [ 'i' 'j' 'k' ] 3 ROLLD AUGMENT AUGMENT
+    \->ROW
+    DROP
+    AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
+    3 \->LIST AXL
+    ABS
+  \>>
+  }
+  { "dS"
+  \<<
+    3 \->LIST AXL DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND [ 'i' 'j' 'k' ] 3 ROLLD AUGMENT AUGMENT
+  \>>
+  }
+  { "dS"
+  \<<
+    3 \->LIST AXL  DUP 'X' DERIV EXPAND SWAP 'Y' DERIV EXPAND AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
+  \>>
+  }
+  MVar
+  DET
+  TCOLLECT
+  TEXPAND
+  TLIN
+  TSIMP
+  TRIG
+  TRIGSIN
+  ROT
+}
+
+

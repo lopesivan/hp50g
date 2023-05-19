@@ -1,0 +1,23 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { + plus                    }
+  sets
+  { "\:-I" :3: "APPS/divisor_corrente.hp" EVAL  }
+  { "r//"  :3: "APPS/resistencia_paralelo.hp" EVAL }
+  {">" \<< 33 KEYEVAL \>>     }
+@ ----------------------------------------------------------------------------
+  { "A.X=B" inMatSol         }
+  { MSol    inMatrref        }
+  {"TYPE"   typing           }
+  { "fasor" :3: "APPS/2fasor.hp" EVAL  }
+  { "rms" \<< 2 \v/ / \->NUM \>>  }
+  {">" \<< 33 KEYEVAL \>>    }
+@ ----------------------------------------------------------------------------
+  AXL
+  DET
+  TRAN
+  INV
+  { expand EXPAND            }
+  {"<" \<< 33 KEYEVAL \>>}
+@ ----------------------------------------------------------------------------
+}

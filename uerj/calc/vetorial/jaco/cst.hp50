@@ -1,0 +1,16 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  { "J(2)"
+  \<<
+    SWAP [ 'X' 'Y' ] HESS DROP SWAP DROP EXPAND SWAP [ 'X' 'Y' ] HESS DROP SWAP DROP EXPAND AUGMENT
+  \>>
+  }
+  { "J(3)"
+  \<<
+    SWAP [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND SWAP [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND ROT [ 'X' 'Y' 'Z' ] HESS DROP SWAP DROP EXPAND ROT ROT AUGMENT AUGMENT
+  \>>
+  }
+  MVar
+  DET
+  TCOLLECT
+}

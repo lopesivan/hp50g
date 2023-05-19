@@ -1,0 +1,26 @@
+CST {
+  { \|^ \<< UPDIR LoadCST \>> }
+  TCOLLECT
+  TEXPAND
+  TLIN
+  TSIMP
+  {">" \<< 33 KEYEVAL \>>}
+  { "<" \<< 33.2 KEYEVAL \>>}
+  TRIG
+  TRIGSIN
+  TRIGCOS
+  TRIGTAN
+  {">" \<< 33 KEYEVAL \>>}
+  { "<" \<< 33.2 KEYEVAL \>>}
+  EXP
+  EXPL
+  ""
+  ""
+  {">" \<< 33 KEYEVAL \>>}
+  { "<" \<< 33.2 KEYEVAL \>>}
+  TCHEBYCHEFF
+  ""
+  ""
+  ""
+  {">" \<< 33 KEYEVAL \>>}
+}
