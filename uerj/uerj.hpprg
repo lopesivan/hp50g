@@ -46,9 +46,9 @@ briotç
      SWAP DROP
    NEXT
    P AXL SIZE 1 - çjLrmatrix
-   STOÑ
-   "Briot-Ruffini"
-   ÑDAT
+   STOÖ
+   "ruff"
+   ÖDAT
  ª
 ª
 CPOL
@@ -124,7 +124,7 @@ funcç
 ª
 inMatrref
 ´ 
-DUP 1. + 2. çLIST çARRY 'ÑDAT' STO ÑDAT RREF
+DUP 1. + 2. çLIST çARRY 'ÖDAT' STO ÖDAT RREF
 ª
 inMatSol
 ´
@@ -322,8 +322,8 @@ vectorExp
 vectorMultiply
 ´ HADAMARD
 ª
-vectorÑ
-´ AXL ÑLIST EVAL
+vectorÖ
+´ AXL ÖLIST EVAL
 ª
 vector.
 ´ SWAP TRAN * TRACE EVAL
@@ -335,6 +335,16 @@ Xn
 	NEXT
  ª
 ª
+CST { 
+{ + ´ 22.2 KEYEVAL uerj ª } 
+{ "CONF" ´ conf ª } 
+{ HELP HELP } 
+IVAN 
+{ "" } 
+{ "" }
+}
+uerj
+DIR
 CST {
  {"SET" sets}
  {"i" in}
@@ -345,6 +355,7 @@ CST {
  {"<" ´ 33.2 KEYEVAL ª}
  { "calc" calc     }
  { "cir"  circuits }
+ {" "}
  {">" ´ 33 KEYEVAL ª}
  {"[uerj]<" ´ 33 KEYEVAL ª}
 }
@@ -522,7 +533,7 @@ DIR
      { "GROB" ´ :3: "APPS/circuit.hp" EVAL ª }
      { "õ\173Y" ´  :3: "APPS/estrela_delta.hp" EVALª }
      { "Y\173õ" ´  :3: "APPS/delta_estrela.hp" EVAL ª }
-     ÑDAT
+     ÖDAT
    }
    complex
    DIR
@@ -673,8 +684,8 @@ DIR
      { "˜"   vectorDivide }
      { "*"     vectorMultiply   }
      { "^"     vectorExp   }
-     { "Ñ"   vectorÑ }
-     { "DOT"   ´ vectorMultiply vectorÑ ª }
+     { "Ö"   vectorÖ }
+     { "DOT"   ´ vectorMultiply vectorÖ ª }
      { ">" ´ 33 KEYEVAL ª}
      { "\043" çjLrmatrix }
      { "-"    çROW   }
@@ -924,8 +935,8 @@ DIR
        {"˜"   vectorDivide }
        {"*"     vectorMultiply   }
        {"^"     vectorExp   }
-       {"Ñ"   vectorÑ }
-       {"DOT"   ´ vectorMultiply vectorÑ ª }
+       {"Ö"   vectorÖ }
+       {"DOT"   ´ vectorMultiply vectorÖ ª }
        {"<" ´ 33 KEYEVAL ª}
      }
    END
@@ -1228,7 +1239,7 @@ DIR
      { "M * " HADAMARD }
      {">" ´ 33 KEYEVAL ª}
      ABS
-     { "DOT" ´ AXL ÑLIST EVAL ª }
+     { "DOT" ´ AXL ÖLIST EVAL ª }
      { "CROSS"
      ´
        AUGMENT M STO M { 1 2 } GET M { 2 3 } GET * M { 1 3 } GET M { 2 2 } GET * - M { 1 3 } GET M { 2 1 } GET * M { 1 1 } GET M { 2 3 } GET * - M { 1 1 } GET M { 2 2 } GET * M { 1 2 } GET M { 2 1 } GET * - 'M' PURGE
@@ -1385,7 +1396,7 @@ poly
 DIR
  CST {
    { ê ´ UPDIR LoadCST ª   }
-   ÑDAT
+   ÖDAT
    p
    f
    çbriot
@@ -1447,6 +1458,7 @@ DIR
      {"<" ´ 33 KEYEVAL ª}
    }
  END
+END
 END
 END 'main' STO main conf main CLEAR
 ª

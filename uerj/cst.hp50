@@ -9,6 +9,7 @@ CST {
   {"<" \<< 33.2 KEYEVAL \>>}
   { "calc" calc     }
   { "cir"  circuits }
-  {">" \<< 33 KEYEVAL \>>}
+  {" "}
+  {" "}
   {"[uerj]<" \<< 33 KEYEVAL \>>}
 }

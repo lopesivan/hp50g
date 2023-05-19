@@ -21,11 +21,13 @@ briot\->
     P \->func
     X0
     1 degree
+	
     FOR I  
       HORNER
       cofs
       +
       'cofs' STO
+	
     NEXT    
     {1} cofs +
     {cofs} PURGE
@@ -57,9 +59,8 @@ briot\->
     NEXT
 
     P AXL SIZE 1 - \->jLrmatrix
-    
     STO\GS
-    "Briot-Ruffini"
+    "ruff"
     \GSDAT
   \>>
 \>>
@@ -573,6 +574,16 @@ Xn
   \>>
 \>>
 
+CST { 
+{ + \<< 22.2 KEYEVAL uerj \>> } 
+{ "CONF" \<< conf \>> } 
+{ HELP HELP } 
+IVAN 
+{ "" } 
+{ "" }
+}
+uerj
+DIR
 CST {
   {"SET" sets}
   {"i" in}
@@ -584,6 +595,7 @@ CST {
   {"<" \<< 33.2 KEYEVAL \>>}
   { "calc" calc     }
   { "cir"  circuits }
+  {" "}
   {">" \<< 33 KEYEVAL \>>}
   {"[uerj]<" \<< 33 KEYEVAL \>>}
 }
@@ -1694,6 +1706,7 @@ DIR
       {"<" \<< 33 KEYEVAL \>>}
     }
   END
+END
 END
 END 'main' STO main conf main CLEAR
 \>>
