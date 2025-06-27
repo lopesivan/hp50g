@@ -1,0 +1,9 @@
+[submodule "external/x49gp"]
+	path = external/x49gp
+	url = https://github.com/lopesivan/x49gp
+[submodule "external/x50ng"]
+	path = external/x50ng
+	url = https://github.com/lopesivan/x50ng
+[submodule "external/hp50g.vim"]
+	path = external/hp50g.vim
+	url = https://github.com/lopesivan/hp50g.vim
